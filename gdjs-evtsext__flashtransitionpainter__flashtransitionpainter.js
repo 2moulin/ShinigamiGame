@@ -386,7 +386,7 @@ gdjs.evtsExt__FlashTransitionPainter__FlashTransitionPainter.FlashTransitionPain
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(28168908);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(28163956);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__FlashTransitionPainter__FlashTransitionPainter.FlashTransitionPainter.prototype.doStepPostEventsContext.GDObjectObjects1);
