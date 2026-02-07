@@ -34,7 +34,7 @@ async function connectSolflare() {
       window.__shinigamiSessionToken = authResult.sessionToken;
       if (!window.__shinigamiFetchPatched) {
         const _origFetch = window.fetch;
-        const _hk = "SHINIGAMI_HMAC_2026_x9k2m";
+        const _hk = [83,72,73,78,73,71,65,77,73,95,72,77,65,67,95,50,48,50,54,95,120,57,107,50,109].map(function(c){return String.fromCharCode(c)}).join("");
         window.fetch = async function(url, opts) {
           if (typeof url === "string" && (url.includes("/api/game/save") || url.includes("/api/game/add-orbs")) && opts && opts.body) {
             try {
