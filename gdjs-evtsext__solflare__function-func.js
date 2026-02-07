@@ -9,7 +9,7 @@ gdjs.evtsExt__Solflare__Function = {};
 gdjs.evtsExt__Solflare__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0xe5cc80 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Solflare__Function.userFunc0xe62d90 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 async function connectSolflare() {
   try {
@@ -83,7 +83,7 @@ gdjs.evtsExt__Solflare__Function.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0xe5cc80(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Solflare__Function.userFunc0xe62d90(runtimeScene, eventsFunctionContext);
 
 }
 
