@@ -194,7 +194,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.LeaderboardCode.userFunc0x269dba0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LeaderboardCode.userFunc0x186f798 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const firebaseData = runtimeScene.getVariables().get("FirebaseData");
 const docs = firebaseData.getChild("docs");
@@ -237,7 +237,7 @@ gdjs.LeaderboardCode.eventsList2 = function(runtimeScene) {
 {
 
 
-gdjs.LeaderboardCode.userFunc0x269dba0(runtimeScene);
+gdjs.LeaderboardCode.userFunc0x186f798(runtimeScene);
 
 }
 

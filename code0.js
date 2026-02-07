@@ -20449,7 +20449,7 @@ for(var i = 0, len = gdjs.ShinigamiCode.GDSolflareObjects3.length ;i < len;++i) 
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x246ba58 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x1650730 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 (function() {
   var noop = function() {};
@@ -20485,7 +20485,7 @@ gdjs.ShinigamiCode.eventsList105 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x246ba58(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1650730(runtimeScene);
 
 }
 
@@ -21311,7 +21311,7 @@ gdjs.ShinigamiCode.eventsList114(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDBackButtonObjects5Objects = Hashtable.newFrom({"BackButton": gdjs.ShinigamiCode.GDBackButtonObjects5});
 gdjs.ShinigamiCode.mapOfEmptyGDPressAKeyWindowObjects = Hashtable.newFrom({"PressAKeyWindow": []});
-gdjs.ShinigamiCode.userFunc0x2472800 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x16574e8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -21329,7 +21329,7 @@ gdjs.ShinigamiCode.eventsList116 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2472800(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x16574e8(runtimeScene);
 
 }
 
@@ -25524,7 +25524,7 @@ if (isConditionTrue_0) {
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects4Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects4});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDTransitionToLobbyObjects4Objects = Hashtable.newFrom({"TransitionToLobby": gdjs.ShinigamiCode.GDTransitionToLobbyObjects4});
-gdjs.ShinigamiCode.userFunc0x249a610 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x167f2f8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 (function() {
   var targetUrl = 'https://www.shinirealms.xyz/';
@@ -25570,7 +25570,7 @@ gdjs.ShinigamiCode.eventsList210 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x249a610(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x167f2f8(runtimeScene);
 
 }
 
@@ -25690,7 +25690,7 @@ gdjs.ShinigamiCode.eventsList211(runtimeScene);
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDShinigamiLogoObjects4Objects = Hashtable.newFrom({"ShinigamiLogo": gdjs.ShinigamiCode.GDShinigamiLogoObjects4});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDShinigamiLogoObjects4Objects = Hashtable.newFrom({"ShinigamiLogo": gdjs.ShinigamiCode.GDShinigamiLogoObjects4});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDShinigamiLogoObjects3Objects = Hashtable.newFrom({"ShinigamiLogo": gdjs.ShinigamiCode.GDShinigamiLogoObjects3});
-gdjs.ShinigamiCode.userFunc0x249b978 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x1680660 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // --- Replace "YOUR_URL_HERE" with your actual link ---
 const urlToOpen = "https://x.com/shinigamiNFT_";
@@ -25709,7 +25709,7 @@ gdjs.ShinigamiCode.eventsList213 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x249b978(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1680660(runtimeScene);
 
 }
 
@@ -25964,7 +25964,7 @@ if (isConditionTrue_0) {
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDLeaderboardObjects4Objects = Hashtable.newFrom({"Leaderboard": gdjs.ShinigamiCode.GDLeaderboardObjects4});
 gdjs.ShinigamiCode.mapOfEmptyGDTransitionToLeaderboardObjects = Hashtable.newFrom({"TransitionToLeaderboard": []});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDTransitionToLeaderboardObjects4Objects = Hashtable.newFrom({"TransitionToLeaderboard": gdjs.ShinigamiCode.GDTransitionToLeaderboardObjects4});
-gdjs.ShinigamiCode.userFunc0x249d5c8 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x16822b0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 (function() {
   var targetUrl = 'https://www.shinirealms.xyz/leaderboard';
@@ -26010,7 +26010,7 @@ gdjs.ShinigamiCode.eventsList217 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x249d5c8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x16822b0(runtimeScene);
 
 }
 
@@ -26752,7 +26752,7 @@ gdjs.ShinigamiCode.eventsList227(runtimeScene);} //End of subevents
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDLeaderboardPauseButtonObjects5Objects = Hashtable.newFrom({"LeaderboardPauseButton": gdjs.ShinigamiCode.GDLeaderboardPauseButtonObjects5});
 gdjs.ShinigamiCode.mapOfEmptyGDTransitionToLeaderboardObjects = Hashtable.newFrom({"TransitionToLeaderboard": []});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDTransitionToLeaderboardObjects5Objects = Hashtable.newFrom({"TransitionToLeaderboard": gdjs.ShinigamiCode.GDTransitionToLeaderboardObjects5});
-gdjs.ShinigamiCode.userFunc0x24a2e90 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x1687b78 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 (function() {
   var targetUrl = 'https://www.shinirealms.xyz/leaderboard';
@@ -26798,7 +26798,7 @@ gdjs.ShinigamiCode.eventsList229 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x24a2e90(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1687b78(runtimeScene);
 
 }
 
@@ -26956,7 +26956,7 @@ gdjs.ShinigamiCode.eventsList231(runtimeScene);} //End of subevents
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDLeaveGameButtonObjects3Objects = Hashtable.newFrom({"LeaveGameButton": gdjs.ShinigamiCode.GDLeaveGameButtonObjects3});
 gdjs.ShinigamiCode.mapOfEmptyGDTransitionToRestartObjects = Hashtable.newFrom({"TransitionToRestart": []});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDTransitionToRestartObjects3Objects = Hashtable.newFrom({"TransitionToRestart": gdjs.ShinigamiCode.GDTransitionToRestartObjects3});
-gdjs.ShinigamiCode.userFunc0x24a43a8 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x1689090 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -26974,7 +26974,7 @@ gdjs.ShinigamiCode.eventsList233 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x24a43a8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1689090(runtimeScene);
 
 }
 
@@ -27485,13 +27485,13 @@ if (isConditionTrue_0) {
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDPhantomObjects3Objects = Hashtable.newFrom({"Phantom": gdjs.ShinigamiCode.GDPhantomObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects3Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects3});
-gdjs.ShinigamiCode.userFunc0x2526cf8 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x170b1d0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const adyfound = runtimeScene.getVariables().get("AddressFound").getAsBoolean();
 console.log(adyfound)
 
 };
-gdjs.ShinigamiCode.userFunc0x25291a8 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x170d668 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -27514,7 +27514,7 @@ gdjs.ShinigamiCode.eventsList238 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x25291a8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x170d668(runtimeScene);
 
 }
 
@@ -27572,7 +27572,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.12
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x252a1b8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x170e5f0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -27595,7 +27595,7 @@ gdjs.ShinigamiCode.eventsList240 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x252a1b8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x170e5f0(runtimeScene);
 
 }
 
@@ -27658,7 +27658,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2526cf8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x170b1d0(runtimeScene);
 
 }
 
@@ -28090,13 +28090,13 @@ gdjs.ShinigamiCode.eventsList250(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDSolflareObjects3Objects = Hashtable.newFrom({"Solflare": gdjs.ShinigamiCode.GDSolflareObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects3Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects3});
-gdjs.ShinigamiCode.userFunc0x2538b98 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x171cfe0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const adyfound = runtimeScene.getVariables().get("AddressFound").getAsBoolean();
 console.log(adyfound)
 
 };
-gdjs.ShinigamiCode.userFunc0x253b0a8 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x171f4f0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -28119,7 +28119,7 @@ gdjs.ShinigamiCode.eventsList252 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x253b0a8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x171f4f0(runtimeScene);
 
 }
 
@@ -28177,7 +28177,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.12
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x253c020 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x1720468 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -28200,7 +28200,7 @@ gdjs.ShinigamiCode.eventsList254 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x253c020(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1720468(runtimeScene);
 
 }
 
@@ -28263,7 +28263,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2538b98(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x171cfe0(runtimeScene);
 
 }
 
@@ -28695,13 +28695,13 @@ gdjs.ShinigamiCode.eventsList264(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDBackpackObjects3Objects = Hashtable.newFrom({"Backpack": gdjs.ShinigamiCode.GDBackpackObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects3Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects3});
-gdjs.ShinigamiCode.userFunc0x254a918 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x172ed90 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const adyfound = runtimeScene.getVariables().get("AddressFound").getAsBoolean();
 console.log(adyfound)
 
 };
-gdjs.ShinigamiCode.userFunc0x254cd78 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x17312a0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -28724,7 +28724,7 @@ gdjs.ShinigamiCode.eventsList266 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x254cd78(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x17312a0(runtimeScene);
 
 }
 
@@ -28782,7 +28782,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.12
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x254dcf0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x1732218 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -28805,7 +28805,7 @@ gdjs.ShinigamiCode.eventsList268 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x254dcf0(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1732218(runtimeScene);
 
 }
 
@@ -28868,7 +28868,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 {
 
 
-gdjs.ShinigamiCode.userFunc0x254a918(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x172ed90(runtimeScene);
 
 }
 
@@ -29300,13 +29300,13 @@ gdjs.ShinigamiCode.eventsList278(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDGlowObjects3Objects = Hashtable.newFrom({"Glow": gdjs.ShinigamiCode.GDGlowObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects3Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects3});
-gdjs.ShinigamiCode.userFunc0x255c5a0 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x1740b40 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const adyfound = runtimeScene.getVariables().get("AddressFound").getAsBoolean();
 console.log(adyfound)
 
 };
-gdjs.ShinigamiCode.userFunc0x255ea00 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x1743050 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -29329,7 +29329,7 @@ gdjs.ShinigamiCode.eventsList280 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x255ea00(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1743050(runtimeScene);
 
 }
 
@@ -29387,7 +29387,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.12
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x255f978 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x1743fc8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -29410,7 +29410,7 @@ gdjs.ShinigamiCode.eventsList282 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x255f978(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1743fc8(runtimeScene);
 
 }
 
@@ -29473,7 +29473,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 {
 
 
-gdjs.ShinigamiCode.userFunc0x255c5a0(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1740b40(runtimeScene);
 
 }
 
@@ -29905,13 +29905,13 @@ gdjs.ShinigamiCode.eventsList292(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDMagicedenObjects2Objects = Hashtable.newFrom({"Magiceden": gdjs.ShinigamiCode.GDMagicedenObjects2});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects2Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects2});
-gdjs.ShinigamiCode.userFunc0x256e228 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x17528f0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const adyfound = runtimeScene.getVariables().get("AddressFound").getAsBoolean();
 console.log(adyfound)
 
 };
-gdjs.ShinigamiCode.userFunc0x2570688 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x1754e00 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -29934,7 +29934,7 @@ gdjs.ShinigamiCode.eventsList294 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2570688(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1754e00(runtimeScene);
 
 }
 
@@ -29992,7 +29992,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.12
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x2571600 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x1755d78 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -30015,7 +30015,7 @@ gdjs.ShinigamiCode.eventsList296 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2571600(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1755d78(runtimeScene);
 
 }
 
@@ -30078,7 +30078,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 {
 
 
-gdjs.ShinigamiCode.userFunc0x256e228(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x17528f0(runtimeScene);
 
 }
 
@@ -34023,6 +34023,33 @@ gdjs.copyArray(runtimeScene.getObjects("TotalOrbs"), gdjs.ShinigamiCode.GDTotalO
 
 {
 
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getScene().getVariables().getFromIndex(30).getAsBoolean();
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("DashBar"), gdjs.ShinigamiCode.GDDashBarObjects4);
+gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.ShinigamiCode.GDPlayerObjects4);
+{for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects4.length ;i < len;++i) {
+    gdjs.ShinigamiCode.GDDashBarObjects4[i].setPosition((( gdjs.ShinigamiCode.GDPlayerObjects4.length === 0 ) ? 0 :gdjs.ShinigamiCode.GDPlayerObjects4[0].getPointX("")) - 27,(( gdjs.ShinigamiCode.GDPlayerObjects4.length === 0 ) ? 0 :gdjs.ShinigamiCode.GDPlayerObjects4[0].getAABBTop()) - 14);
+}
+}
+{for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects4.length ;i < len;++i) {
+    gdjs.ShinigamiCode.GDDashBarObjects4[i].getBehavior("Resizable").setSize(56, 24);
+}
+}
+{for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects4.length ;i < len;++i) {
+    gdjs.ShinigamiCode.GDDashBarObjects4[i].setZOrder((( gdjs.ShinigamiCode.GDPlayerObjects4.length === 0 ) ? 0 :gdjs.ShinigamiCode.GDPlayerObjects4[0].getZOrder()) - 1);
+}
+}
+}
+
+}
+
+
+{
+
 gdjs.copyArray(runtimeScene.getObjects("BackButtonForGame"), gdjs.ShinigamiCode.GDBackButtonForGameObjects4);
 gdjs.copyArray(runtimeScene.getObjects("PlayButtonForGame"), gdjs.ShinigamiCode.GDPlayButtonForGameObjects4);
 
@@ -36933,7 +36960,7 @@ if (isConditionTrue_0) {
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitTextObjects3Objects = Hashtable.newFrom({"ExitText": gdjs.ShinigamiCode.GDExitTextObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDTransitionToRestartObjects3Objects = Hashtable.newFrom({"TransitionToRestart": gdjs.ShinigamiCode.GDTransitionToRestartObjects3});
-gdjs.ShinigamiCode.userFunc0x24e5458 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x16c9bd0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -36951,7 +36978,7 @@ gdjs.ShinigamiCode.eventsList416 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x24e5458(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x16c9bd0(runtimeScene);
 
 }
 
@@ -37088,7 +37115,7 @@ if (true)
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x24e6720 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x16cae00 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -37106,7 +37133,7 @@ gdjs.ShinigamiCode.eventsList421 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x24e6720(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x16cae00(runtimeScene);
 
 }
 
@@ -40434,7 +40461,7 @@ gdjs.ShinigamiCode.eventsList461(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDBuyPotionDeadMenuObjects3Objects = Hashtable.newFrom({"BuyPotionDeadMenu": gdjs.ShinigamiCode.GDBuyPotionDeadMenuObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDvortexObjects5Objects = Hashtable.newFrom({"vortex": gdjs.ShinigamiCode.GDvortexObjects5});
-gdjs.ShinigamiCode.userFunc0x25fa108 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x17de890 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -40466,7 +40493,7 @@ if (isConditionTrue_0) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x25fa108(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x17de890(runtimeScene);
 
 }
 
@@ -41735,7 +41762,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDPowerUpFlameShopTextObjects2Objects = Hashtable.newFrom({"PowerUpFlameShopText": gdjs.ShinigamiCode.GDPowerUpFlameShopTextObjects2});
-gdjs.ShinigamiCode.userFunc0x2505320 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x16e9968 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -41753,7 +41780,7 @@ gdjs.ShinigamiCode.eventsList477 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2505320(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x16e9968(runtimeScene);
 
 }
 
@@ -41797,7 +41824,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x2505e68 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x16ea4c0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -41815,7 +41842,7 @@ gdjs.ShinigamiCode.eventsList479 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2505e68(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x16ea4c0(runtimeScene);
 
 }
 
@@ -42108,7 +42135,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDReviveShopTextObjects1Objects = Hashtable.newFrom({"ReviveShopText": gdjs.ShinigamiCode.GDReviveShopTextObjects1});
-gdjs.ShinigamiCode.userFunc0x25087b0 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x16ece08 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -42126,7 +42153,7 @@ gdjs.ShinigamiCode.eventsList487 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x25087b0(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x16ece08(runtimeScene);
 
 }
 
