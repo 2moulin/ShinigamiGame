@@ -5081,6 +5081,23 @@ if (isConditionTrue_0) {
 
 
 let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.object.getSceneInstancesCount(runtimeScene, gdjs.ShinigamiCode.mapOfEmptyGDSlimeObjects) == 0;
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("DashBar"), gdjs.ShinigamiCode.GDDashBarObjects5);
+{for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects5.length ;i < len;++i) {
+    gdjs.ShinigamiCode.GDDashBarObjects5[i].setZOrder(999);
+}
+}
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("DashBar"), gdjs.ShinigamiCode.GDDashBarObjects5);
 gdjs.copyArray(gdjs.ShinigamiCode.GDPlayerObjects3, gdjs.ShinigamiCode.GDPlayerObjects5);
@@ -5096,23 +5113,6 @@ gdjs.copyArray(runtimeScene.getObjects("Slime"), gdjs.ShinigamiCode.GDSlimeObjec
 }
 {for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects5.length ;i < len;++i) {
     gdjs.ShinigamiCode.GDDashBarObjects5[i].setZOrder((( gdjs.ShinigamiCode.GDSlimeObjects5.length === 0 ) ? 0 :gdjs.ShinigamiCode.GDSlimeObjects5[0].getZOrder()) - 1);
-}
-}
-}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.object.getSceneInstancesCount(runtimeScene, gdjs.ShinigamiCode.mapOfEmptyGDSlimeObjects) == 0;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("DashBar"), gdjs.ShinigamiCode.GDDashBarObjects5);
-{for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects5.length ;i < len;++i) {
-    gdjs.ShinigamiCode.GDDashBarObjects5[i].setZOrder(999);
 }
 }
 }
@@ -20450,7 +20450,7 @@ for(var i = 0, len = gdjs.ShinigamiCode.GDSolflareObjects3.length ;i < len;++i) 
 }
 
 
-};gdjs.ShinigamiCode.userFunc0xf57fc8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x22262a0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 (function() {
   var noop = function() {};
@@ -20486,7 +20486,7 @@ gdjs.ShinigamiCode.eventsList105 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0xf57fc8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x22262a0(runtimeScene);
 
 }
 
@@ -20813,11 +20813,19 @@ gdjs.ShinigamiCode.GDDashBarObjects4.length = 0;
 {gdjs.evtTools.object.createObjectOnScene(runtimeScene, gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDDashBarObjects4Objects, (( gdjs.ShinigamiCode.GDPlayerObjects4.length === 0 ) ? 0 :gdjs.ShinigamiCode.GDPlayerObjects4[0].getPointX("")) - 15, (( gdjs.ShinigamiCode.GDPlayerObjects4.length === 0 ) ? 0 :gdjs.ShinigamiCode.GDPlayerObjects4[0].getAABBTop()) - 10, "");
 }
 {for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects4.length ;i < len;++i) {
+    gdjs.ShinigamiCode.GDDashBarObjects4[i].getBehavior("Opacity").setOpacity(0);
+}
+}
+{for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects4.length ;i < len;++i) {
     gdjs.ShinigamiCode.GDDashBarObjects4[i].setZOrder((( gdjs.ShinigamiCode.GDPlayerObjects4.length === 0 ) ? 0 :gdjs.ShinigamiCode.GDPlayerObjects4[0].getZOrder()) + 1);
 }
 }
 {for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects4.length ;i < len;++i) {
     gdjs.ShinigamiCode.GDDashBarObjects4[i].getBehavior("Effect").enableEffect("Effect", false);
+}
+}
+{for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects4.length ;i < len;++i) {
+    gdjs.ShinigamiCode.GDDashBarObjects4[i].getBehavior("Tween").addObjectOpacityTween2("DashTweenStartSpawning", 255, "linear", 0.1, false);
 }
 }
 
@@ -21300,7 +21308,7 @@ gdjs.ShinigamiCode.eventsList114(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDBackButtonObjects5Objects = Hashtable.newFrom({"BackButton": gdjs.ShinigamiCode.GDBackButtonObjects5});
 gdjs.ShinigamiCode.mapOfEmptyGDPressAKeyWindowObjects = Hashtable.newFrom({"PressAKeyWindow": []});
-gdjs.ShinigamiCode.userFunc0xbb1f28 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0xa46c70 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -21318,7 +21326,7 @@ gdjs.ShinigamiCode.eventsList116 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0xbb1f28(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xa46c70(runtimeScene);
 
 }
 
@@ -25513,7 +25521,7 @@ if (isConditionTrue_0) {
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects4Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects4});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDTransitionToLobbyObjects4Objects = Hashtable.newFrom({"TransitionToLobby": gdjs.ShinigamiCode.GDTransitionToLobbyObjects4});
-gdjs.ShinigamiCode.userFunc0xce5260 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x23ea8d0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 (function() {
   var targetUrl = 'https://www.shinirealms.xyz/';
@@ -25559,7 +25567,7 @@ gdjs.ShinigamiCode.eventsList210 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0xce5260(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x23ea8d0(runtimeScene);
 
 }
 
@@ -25679,7 +25687,7 @@ gdjs.ShinigamiCode.eventsList211(runtimeScene);
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDShinigamiLogoObjects4Objects = Hashtable.newFrom({"ShinigamiLogo": gdjs.ShinigamiCode.GDShinigamiLogoObjects4});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDShinigamiLogoObjects4Objects = Hashtable.newFrom({"ShinigamiLogo": gdjs.ShinigamiCode.GDShinigamiLogoObjects4});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDShinigamiLogoObjects3Objects = Hashtable.newFrom({"ShinigamiLogo": gdjs.ShinigamiCode.GDShinigamiLogoObjects3});
-gdjs.ShinigamiCode.userFunc0xce6990 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0xe52f28 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // --- Replace "YOUR_URL_HERE" with your actual link ---
 const urlToOpen = "https://x.com/shinigamiNFT_";
@@ -25698,7 +25706,7 @@ gdjs.ShinigamiCode.eventsList213 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0xce6990(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xe52f28(runtimeScene);
 
 }
 
@@ -25953,7 +25961,7 @@ if (isConditionTrue_0) {
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDLeaderboardObjects4Objects = Hashtable.newFrom({"Leaderboard": gdjs.ShinigamiCode.GDLeaderboardObjects4});
 gdjs.ShinigamiCode.mapOfEmptyGDTransitionToLeaderboardObjects = Hashtable.newFrom({"TransitionToLeaderboard": []});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDTransitionToLeaderboardObjects4Objects = Hashtable.newFrom({"TransitionToLeaderboard": gdjs.ShinigamiCode.GDTransitionToLeaderboardObjects4});
-gdjs.ShinigamiCode.userFunc0x910918 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0xd29ff0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 (function() {
   var targetUrl = 'https://www.shinirealms.xyz/leaderboard';
@@ -25999,7 +26007,7 @@ gdjs.ShinigamiCode.eventsList217 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x910918(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xd29ff0(runtimeScene);
 
 }
 
@@ -26741,7 +26749,7 @@ gdjs.ShinigamiCode.eventsList227(runtimeScene);} //End of subevents
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDLeaderboardPauseButtonObjects5Objects = Hashtable.newFrom({"LeaderboardPauseButton": gdjs.ShinigamiCode.GDLeaderboardPauseButtonObjects5});
 gdjs.ShinigamiCode.mapOfEmptyGDTransitionToLeaderboardObjects = Hashtable.newFrom({"TransitionToLeaderboard": []});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDTransitionToLeaderboardObjects5Objects = Hashtable.newFrom({"TransitionToLeaderboard": gdjs.ShinigamiCode.GDTransitionToLeaderboardObjects5});
-gdjs.ShinigamiCode.userFunc0x2ad10f8 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x9465a8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 (function() {
   var targetUrl = 'https://www.shinirealms.xyz/leaderboard';
@@ -26787,7 +26795,7 @@ gdjs.ShinigamiCode.eventsList229 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2ad10f8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x9465a8(runtimeScene);
 
 }
 
@@ -26945,7 +26953,7 @@ gdjs.ShinigamiCode.eventsList231(runtimeScene);} //End of subevents
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDLeaveGameButtonObjects3Objects = Hashtable.newFrom({"LeaveGameButton": gdjs.ShinigamiCode.GDLeaveGameButtonObjects3});
 gdjs.ShinigamiCode.mapOfEmptyGDTransitionToRestartObjects = Hashtable.newFrom({"TransitionToRestart": []});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDTransitionToRestartObjects3Objects = Hashtable.newFrom({"TransitionToRestart": gdjs.ShinigamiCode.GDTransitionToRestartObjects3});
-gdjs.ShinigamiCode.userFunc0x241e3c0 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x92ebc0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -26963,7 +26971,7 @@ gdjs.ShinigamiCode.eventsList233 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x241e3c0(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x92ebc0(runtimeScene);
 
 }
 
@@ -27474,13 +27482,13 @@ if (isConditionTrue_0) {
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDPhantomObjects3Objects = Hashtable.newFrom({"Phantom": gdjs.ShinigamiCode.GDPhantomObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects3Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects3});
-gdjs.ShinigamiCode.userFunc0x2385e80 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0xefb0d8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const adyfound = runtimeScene.getVariables().get("AddressFound").getAsBoolean();
 console.log(adyfound)
 
 };
-gdjs.ShinigamiCode.userFunc0xcaaa20 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x23644b8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -27503,7 +27511,7 @@ gdjs.ShinigamiCode.eventsList238 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0xcaaa20(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x23644b8(runtimeScene);
 
 }
 
@@ -27561,7 +27569,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.12
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x24f7968 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x1ea4920 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -27584,7 +27592,7 @@ gdjs.ShinigamiCode.eventsList240 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x24f7968(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1ea4920(runtimeScene);
 
 }
 
@@ -27647,7 +27655,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2385e80(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xefb0d8(runtimeScene);
 
 }
 
@@ -28079,13 +28087,13 @@ gdjs.ShinigamiCode.eventsList250(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDSolflareObjects3Objects = Hashtable.newFrom({"Solflare": gdjs.ShinigamiCode.GDSolflareObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects3Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects3});
-gdjs.ShinigamiCode.userFunc0x27c2f58 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0xeedaa8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const adyfound = runtimeScene.getVariables().get("AddressFound").getAsBoolean();
 console.log(adyfound)
 
 };
-gdjs.ShinigamiCode.userFunc0x2774e40 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0xc071f8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -28108,7 +28116,7 @@ gdjs.ShinigamiCode.eventsList252 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2774e40(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xc071f8(runtimeScene);
 
 }
 
@@ -28166,7 +28174,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.12
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x27c3490 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0xeee208 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -28189,7 +28197,7 @@ gdjs.ShinigamiCode.eventsList254 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x27c3490(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xeee208(runtimeScene);
 
 }
 
@@ -28252,7 +28260,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 {
 
 
-gdjs.ShinigamiCode.userFunc0x27c2f58(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xeedaa8(runtimeScene);
 
 }
 
@@ -28684,13 +28692,13 @@ gdjs.ShinigamiCode.eventsList264(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDBackpackObjects3Objects = Hashtable.newFrom({"Backpack": gdjs.ShinigamiCode.GDBackpackObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects3Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects3});
-gdjs.ShinigamiCode.userFunc0x2385ac8 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x2788248 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const adyfound = runtimeScene.getVariables().get("AddressFound").getAsBoolean();
 console.log(adyfound)
 
 };
-gdjs.ShinigamiCode.userFunc0xd34a48 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x8f3938 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -28713,7 +28721,7 @@ gdjs.ShinigamiCode.eventsList266 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0xd34a48(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x8f3938(runtimeScene);
 
 }
 
@@ -28771,7 +28779,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.12
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x27c3ba8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0xd747a8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -28794,7 +28802,7 @@ gdjs.ShinigamiCode.eventsList268 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x27c3ba8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xd747a8(runtimeScene);
 
 }
 
@@ -28857,7 +28865,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2385ac8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x2788248(runtimeScene);
 
 }
 
@@ -29289,13 +29297,13 @@ gdjs.ShinigamiCode.eventsList278(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDGlowObjects3Objects = Hashtable.newFrom({"Glow": gdjs.ShinigamiCode.GDGlowObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects3Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects3});
-gdjs.ShinigamiCode.userFunc0x27c4728 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x8f4138 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const adyfound = runtimeScene.getVariables().get("AddressFound").getAsBoolean();
 console.log(adyfound)
 
 };
-gdjs.ShinigamiCode.userFunc0x27c48c8 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0xb10878 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -29318,7 +29326,7 @@ gdjs.ShinigamiCode.eventsList280 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x27c48c8(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xb10878(runtimeScene);
 
 }
 
@@ -29376,7 +29384,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.12
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x2500960 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0xb10780 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -29399,7 +29407,7 @@ gdjs.ShinigamiCode.eventsList282 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2500960(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xb10780(runtimeScene);
 
 }
 
@@ -29462,7 +29470,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 {
 
 
-gdjs.ShinigamiCode.userFunc0x27c4728(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x8f4138(runtimeScene);
 
 }
 
@@ -29894,13 +29902,13 @@ gdjs.ShinigamiCode.eventsList292(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDMagicedenObjects2Objects = Hashtable.newFrom({"Magiceden": gdjs.ShinigamiCode.GDMagicedenObjects2});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitButtonObjects2Objects = Hashtable.newFrom({"ExitButton": gdjs.ShinigamiCode.GDExitButtonObjects2});
-gdjs.ShinigamiCode.userFunc0x2776968 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x8f4e10 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const adyfound = runtimeScene.getVariables().get("AddressFound").getAsBoolean();
 console.log(adyfound)
 
 };
-gdjs.ShinigamiCode.userFunc0xbb6d88 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0xb225c8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -29923,7 +29931,7 @@ gdjs.ShinigamiCode.eventsList294 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0xbb6d88(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xb225c8(runtimeScene);
 
 }
 
@@ -29981,7 +29989,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.12
 }
 
 
-};gdjs.ShinigamiCode.userFunc0xc08ef0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0xb18e48 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const walletValue = runtimeScene.getGame().getVariables().get('Saved').getChild('Wallet').getAsString();
 
@@ -30004,7 +30012,7 @@ gdjs.ShinigamiCode.eventsList296 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0xc08ef0(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xb18e48(runtimeScene);
 
 }
 
@@ -30067,7 +30075,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 {
 
 
-gdjs.ShinigamiCode.userFunc0x2776968(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x8f4e10(runtimeScene);
 
 }
 
@@ -34164,6 +34172,31 @@ gdjs.ShinigamiCode.eventsList360(runtimeScene);} //End of subevents
 {
 
 
+let isConditionTrue_0 = false;
+{
+gdjs.copyArray(runtimeScene.getObjects("DashBar"), gdjs.ShinigamiCode.GDDashBarObjects4);
+gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.ShinigamiCode.GDPlayerObjects4);
+gdjs.copyArray(runtimeScene.getObjects("Slime"), gdjs.ShinigamiCode.GDSlimeObjects4);
+{for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects4.length ;i < len;++i) {
+    gdjs.ShinigamiCode.GDDashBarObjects4[i].setPosition((( gdjs.ShinigamiCode.GDPlayerObjects4.length === 0 ) ? 0 :gdjs.ShinigamiCode.GDPlayerObjects4[0].getPointX("")) - 27,(( gdjs.ShinigamiCode.GDPlayerObjects4.length === 0 ) ? 0 :gdjs.ShinigamiCode.GDPlayerObjects4[0].getAABBTop()) - 14);
+}
+}
+{for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects4.length ;i < len;++i) {
+    gdjs.ShinigamiCode.GDDashBarObjects4[i].getBehavior("Resizable").setSize(56, 24);
+}
+}
+{for(var i = 0, len = gdjs.ShinigamiCode.GDDashBarObjects4.length ;i < len;++i) {
+    gdjs.ShinigamiCode.GDDashBarObjects4[i].setZOrder((( gdjs.ShinigamiCode.GDSlimeObjects4.length === 0 ) ? 0 :gdjs.ShinigamiCode.GDSlimeObjects4[0].getZOrder()) - 1);
+}
+}
+}
+
+}
+
+
+{
+
+
 gdjs.ShinigamiCode.eventsList364(runtimeScene);
 }
 
@@ -36920,7 +36953,7 @@ if (isConditionTrue_0) {
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDExitTextObjects3Objects = Hashtable.newFrom({"ExitText": gdjs.ShinigamiCode.GDExitTextObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDTransitionToRestartObjects3Objects = Hashtable.newFrom({"TransitionToRestart": gdjs.ShinigamiCode.GDTransitionToRestartObjects3});
-gdjs.ShinigamiCode.userFunc0xa3fbd0 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x2382b58 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -36938,7 +36971,7 @@ gdjs.ShinigamiCode.eventsList416 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0xa3fbd0(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x2382b58(runtimeScene);
 
 }
 
@@ -37075,7 +37108,7 @@ if (true)
 }
 
 
-};gdjs.ShinigamiCode.userFunc0x244af20 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x22fdb60 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -37093,7 +37126,7 @@ gdjs.ShinigamiCode.eventsList421 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x244af20(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x22fdb60(runtimeScene);
 
 }
 
@@ -40421,7 +40454,7 @@ gdjs.ShinigamiCode.eventsList461(runtimeScene);} //End of subevents
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDBuyPotionDeadMenuObjects3Objects = Hashtable.newFrom({"BuyPotionDeadMenu": gdjs.ShinigamiCode.GDBuyPotionDeadMenuObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDvortexObjects5Objects = Hashtable.newFrom({"vortex": gdjs.ShinigamiCode.GDvortexObjects5});
-gdjs.ShinigamiCode.userFunc0x1ed7260 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0xc1e578 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -40453,7 +40486,7 @@ if (isConditionTrue_0) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x1ed7260(runtimeScene);
+gdjs.ShinigamiCode.userFunc0xc1e578(runtimeScene);
 
 }
 
@@ -41721,8 +41754,8 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDPowerUpFlameShopTextObjects3Objects = Hashtable.newFrom({"PowerUpFlameShopText": gdjs.ShinigamiCode.GDPowerUpFlameShopTextObjects3});
-gdjs.ShinigamiCode.userFunc0x20f3028 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDPowerUpFlameShopTextObjects2Objects = Hashtable.newFrom({"PowerUpFlameShopText": gdjs.ShinigamiCode.GDPowerUpFlameShopTextObjects2});
+gdjs.ShinigamiCode.userFunc0x20f09c8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -41740,7 +41773,7 @@ gdjs.ShinigamiCode.eventsList477 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x20f3028(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x20f09c8(runtimeScene);
 
 }
 
@@ -41784,8 +41817,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDPowerUpFlameShopTextObjects2Objects = Hashtable.newFrom({"PowerUpFlameShopText": gdjs.ShinigamiCode.GDPowerUpFlameShopTextObjects2});
-gdjs.ShinigamiCode.userFunc0x20bbb98 = function GDJSInlineCode(runtimeScene) {
+};gdjs.ShinigamiCode.userFunc0x20f1760 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -41803,7 +41835,7 @@ gdjs.ShinigamiCode.eventsList479 = function(runtimeScene) {
 {
 
 
-gdjs.ShinigamiCode.userFunc0x20bbb98(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x20f1760(runtimeScene);
 
 }
 
@@ -41851,24 +41883,10 @@ if (isConditionTrue_0) {
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("PowerUpFlameShopText"), gdjs.ShinigamiCode.GDPowerUpFlameShopTextObjects3);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDPowerUpFlameShopTextObjects3Objects, runtimeScene, true, false);
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
 {isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(0).getChild("FlamePowerup").getAsNumber() == 0);
-}
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(30024628);
-}
-}
-}
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("TotalOrbs"), gdjs.ShinigamiCode.GDTotalOrbsObjects3);
@@ -41886,24 +41904,10 @@ gdjs.ShinigamiCode.eventsList478(runtimeScene);} //End of subevents
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("PowerUpFlameShopText"), gdjs.ShinigamiCode.GDPowerUpFlameShopTextObjects2);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDPowerUpFlameShopTextObjects2Objects, runtimeScene, true, false);
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
 {isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(0).getChild("FlamePowerup").getAsNumber() > 0);
-}
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(30026244);
-}
-}
-}
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("TotalOrbs"), gdjs.ShinigamiCode.GDTotalOrbsObjects2);
@@ -41923,12 +41927,39 @@ gdjs.ShinigamiCode.eventsList480(runtimeScene);} //End of subevents
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("PowerUpFlameShopText"), gdjs.ShinigamiCode.GDPowerUpFlameShopTextObjects2);
 
-gdjs.ShinigamiCode.eventsList481(runtimeScene);
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDPowerUpFlameShopTextObjects2Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9330404);
+}
+}
+}
+if (isConditionTrue_0) {
+
+{ //Subevents
+gdjs.ShinigamiCode.eventsList481(runtimeScene);} //End of subevents
+}
+
 }
 
 
 };gdjs.ShinigamiCode.eventsList483 = function(runtimeScene) {
+
+{
+
+
+gdjs.ShinigamiCode.eventsList482(runtimeScene);
+}
+
+
+};gdjs.ShinigamiCode.eventsList484 = function(runtimeScene) {
 
 {
 
@@ -41947,11 +41978,11 @@ gdjs.ShinigamiCode.eventsList476(runtimeScene);
 {
 
 
-gdjs.ShinigamiCode.eventsList482(runtimeScene);
+gdjs.ShinigamiCode.eventsList483(runtimeScene);
 }
 
 
-};gdjs.ShinigamiCode.eventsList484 = function(runtimeScene) {
+};gdjs.ShinigamiCode.eventsList485 = function(runtimeScene) {
 
 {
 
@@ -41992,7 +42023,7 @@ gdjs.copyArray(runtimeScene.getObjects("ReviveShopText"), gdjs.ShinigamiCode.GDR
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDReviveShopTextObjects3Objects = Hashtable.newFrom({"ReviveShopText": gdjs.ShinigamiCode.GDReviveShopTextObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDReviveShopTextObjects3Objects = Hashtable.newFrom({"ReviveShopText": gdjs.ShinigamiCode.GDReviveShopTextObjects3});
 gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDReviveShopTextObjects2Objects = Hashtable.newFrom({"ReviveShopText": gdjs.ShinigamiCode.GDReviveShopTextObjects2});
-gdjs.ShinigamiCode.eventsList485 = function(runtimeScene) {
+gdjs.ShinigamiCode.eventsList486 = function(runtimeScene) {
 
 {
 
@@ -42097,7 +42128,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.ShinigamiCode.mapOfGDgdjs_9546ShinigamiCode_9546GDReviveShopTextObjects1Objects = Hashtable.newFrom({"ReviveShopText": gdjs.ShinigamiCode.GDReviveShopTextObjects1});
-gdjs.ShinigamiCode.userFunc0x1ea2758 = function GDJSInlineCode(runtimeScene) {
+gdjs.ShinigamiCode.userFunc0x1ea3040 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const saved = runtimeScene.getGame().getVariables().get("Saved");
 const walletAddress = saved.getChild("Wallet").getAsString();
@@ -42110,17 +42141,17 @@ fetch("https://www.shinirealms.xyz/api/game/save", {
 })
 .catch(() => {});
 };
-gdjs.ShinigamiCode.eventsList486 = function(runtimeScene) {
+gdjs.ShinigamiCode.eventsList487 = function(runtimeScene) {
 
 {
 
 
-gdjs.ShinigamiCode.userFunc0x1ea2758(runtimeScene);
+gdjs.ShinigamiCode.userFunc0x1ea3040(runtimeScene);
 
 }
 
 
-};gdjs.ShinigamiCode.eventsList487 = function(runtimeScene) {
+};gdjs.ShinigamiCode.eventsList488 = function(runtimeScene) {
 
 {
 
@@ -42138,7 +42169,7 @@ if (isConditionTrue_0) {
 }
 
 { //Subevents
-gdjs.ShinigamiCode.eventsList486(runtimeScene);} //End of subevents
+gdjs.ShinigamiCode.eventsList487(runtimeScene);} //End of subevents
 }
 
 }
@@ -42159,7 +42190,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.ShinigamiCode.eventsList488 = function(runtimeScene) {
+};gdjs.ShinigamiCode.eventsList489 = function(runtimeScene) {
 
 {
 
@@ -42185,18 +42216,9 @@ gdjs.copyArray(runtimeScene.getObjects("TotalOrbs"), gdjs.ShinigamiCode.GDTotalO
 }
 
 { //Subevents
-gdjs.ShinigamiCode.eventsList487(runtimeScene);} //End of subevents
+gdjs.ShinigamiCode.eventsList488(runtimeScene);} //End of subevents
 }
 
-}
-
-
-};gdjs.ShinigamiCode.eventsList489 = function(runtimeScene) {
-
-{
-
-
-gdjs.ShinigamiCode.eventsList488(runtimeScene);
 }
 
 
@@ -42205,9 +42227,11 @@ gdjs.ShinigamiCode.eventsList488(runtimeScene);
 {
 
 
-gdjs.ShinigamiCode.eventsList484(runtimeScene);
+gdjs.ShinigamiCode.eventsList489(runtimeScene);
 }
 
+
+};gdjs.ShinigamiCode.eventsList491 = function(runtimeScene) {
 
 {
 
@@ -42219,11 +42243,18 @@ gdjs.ShinigamiCode.eventsList485(runtimeScene);
 {
 
 
-gdjs.ShinigamiCode.eventsList489(runtimeScene);
+gdjs.ShinigamiCode.eventsList486(runtimeScene);
 }
 
 
-};gdjs.ShinigamiCode.eventsList491 = function(runtimeScene) {
+{
+
+
+gdjs.ShinigamiCode.eventsList490(runtimeScene);
+}
+
+
+};gdjs.ShinigamiCode.eventsList492 = function(runtimeScene) {
 
 {
 
@@ -42242,18 +42273,18 @@ gdjs.ShinigamiCode.eventsList474(runtimeScene);
 {
 
 
-gdjs.ShinigamiCode.eventsList483(runtimeScene);
+gdjs.ShinigamiCode.eventsList484(runtimeScene);
 }
 
 
 {
 
 
-gdjs.ShinigamiCode.eventsList490(runtimeScene);
+gdjs.ShinigamiCode.eventsList491(runtimeScene);
 }
 
 
-};gdjs.ShinigamiCode.eventsList492 = function(runtimeScene) {
+};gdjs.ShinigamiCode.eventsList493 = function(runtimeScene) {
 
 {
 
@@ -42356,11 +42387,11 @@ gdjs.ShinigamiCode.eventsList469(runtimeScene);
 {
 
 
-gdjs.ShinigamiCode.eventsList491(runtimeScene);
+gdjs.ShinigamiCode.eventsList492(runtimeScene);
 }
 
 
-};gdjs.ShinigamiCode.eventsList493 = function(runtimeScene) {
+};gdjs.ShinigamiCode.eventsList494 = function(runtimeScene) {
 
 {
 
@@ -42386,11 +42417,11 @@ gdjs.ShinigamiCode.eventsList312(runtimeScene);
 {
 
 
-gdjs.ShinigamiCode.eventsList492(runtimeScene);
+gdjs.ShinigamiCode.eventsList493(runtimeScene);
 }
 
 
-};gdjs.ShinigamiCode.eventsList494 = function(runtimeScene) {
+};gdjs.ShinigamiCode.eventsList495 = function(runtimeScene) {
 
 {
 
@@ -42399,7 +42430,7 @@ let isConditionTrue_0 = false;
 {
 
 { //Subevents
-gdjs.ShinigamiCode.eventsList493(runtimeScene);} //End of subevents
+gdjs.ShinigamiCode.eventsList494(runtimeScene);} //End of subevents
 }
 
 }
@@ -46911,7 +46942,7 @@ gdjs.ShinigamiCode.GDLeaderboardPauseButtonObjects34.length = 0;
 gdjs.ShinigamiCode.GDLeaderboardPauseButtonObjects35.length = 0;
 gdjs.ShinigamiCode.GDLeaderboardPauseButtonObjects36.length = 0;
 
-gdjs.ShinigamiCode.eventsList494(runtimeScene);
+gdjs.ShinigamiCode.eventsList495(runtimeScene);
 gdjs.ShinigamiCode.GDCastleTileObjects1.length = 0;
 gdjs.ShinigamiCode.GDCastleTileObjects2.length = 0;
 gdjs.ShinigamiCode.GDCastleTileObjects3.length = 0;

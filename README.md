@@ -24,6 +24,13 @@ Defense survival game
 - ESC to pause
 - On mobile theres 2 joysticks
 
+## Patch 1.2.1 (Feb 2026)
+
+- Optimized all audio assets (128kbps mono) for faster loading
+- Compressed image assets for better mobile performance
+- Game size reduced from 47MB to 25MB
+- Anti-cheat request signing on saves
+
 ## Patch 1.2.0 (Feb 2026)
 
 - Wallet session authentication (sign message to prove ownership)

@@ -9,7 +9,7 @@ gdjs.evtsExt__WalletConnection__Function = {};
 gdjs.evtsExt__WalletConnection__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__WalletConnection__Function.userFunc0x2b43e98 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__WalletConnection__Function.userFunc0xd71088 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 async function connectPhantom() {
   try {
@@ -77,13 +77,14 @@ async function connectPhantom() {
   }
 }
 connectPhantom();
+
 };
 gdjs.evtsExt__WalletConnection__Function.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
-gdjs.evtsExt__WalletConnection__Function.userFunc0x2b43e98(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__WalletConnection__Function.userFunc0xd71088(runtimeScene, eventsFunctionContext);
 
 }
 
