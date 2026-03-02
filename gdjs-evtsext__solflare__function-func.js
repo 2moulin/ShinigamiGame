@@ -9,13 +9,14 @@ gdjs.evtsExt__Solflare__Function = {};
 gdjs.evtsExt__Solflare__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x99b6d8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Solflare__Function.userFunc0xff20f0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
+// Set up postMessage listener for parent page bridge (Solflare mobile)
 if (!window.__shinigamiWalletListenerSet) {
   window.__shinigamiWalletListenerSet = true;
   window.__shinigamiWalletResolve = null;
   window.addEventListener('message', function(event) {
-    if (event.data && event.data.type === 'shinigami-wallet' && event.data.wallet) {
+    if (event.data && event.data.type === 'shinigami-wallet') {
       if (window.__shinigamiWalletResolve) {
         window.__shinigamiWalletResolve(event.data);
         window.__shinigamiWalletResolve = null;
@@ -117,12 +118,15 @@ async function connectSolflare() {
         }
       } catch (e) {}
     } else {
-      // No provider in iframe - wait for parent page bridge (Solflare mobile)
+      // No provider in iframe - ask parent page to connect (Solflare mobile)
+      window.parent.postMessage({ type: 'shinigami-wallet-request' }, '*');
+
+      // Wait for parent response (or use pending data if already received)
       var bridgeData = window.__shinigamiPendingWallet || null;
       if (!bridgeData) {
         bridgeData = await Promise.race([
           new Promise(function(resolve) { window.__shinigamiWalletResolve = resolve; }),
-          new Promise(function(resolve) { setTimeout(function() { resolve(null); }, 15000); })
+          new Promise(function(resolve) { setTimeout(function() { resolve(null); }, 30000); })
         ]);
       }
 
@@ -175,7 +179,7 @@ gdjs.evtsExt__Solflare__Function.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x99b6d8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Solflare__Function.userFunc0xff20f0(runtimeScene, eventsFunctionContext);
 
 }
 
