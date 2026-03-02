@@ -9,7 +9,7 @@ gdjs.evtsExt__Solflare__Function = {};
 gdjs.evtsExt__Solflare__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x1043358 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Solflare__Function.userFunc0x18bf3b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 async function connectSolflare() {
   try {
@@ -18,16 +18,30 @@ async function connectSolflare() {
       const provider = window.solflare;
       await provider.connect();
       const publicKey = provider.publicKey.toString();
-      const timestamp = Date.now().toString();
-      const message = "shinigami-auth-" + timestamp;
-      const encoded = new TextEncoder().encode(message);
-      const signResult = await provider.signMessage(encoded);
-      const sigBytes = new Uint8Array(signResult.signature || signResult);
-      const sigBase64 = btoa(String.fromCharCode.apply(null, Array.from(sigBytes)));
+      
+      var sigBase64 = "";
+      var message = "";
+      var connectOnly = false;
+      
+      try {
+        var timestamp = Date.now().toString();
+        message = "shinigami-auth-" + timestamp;
+        var encoded = new TextEncoder().encode(message);
+        var signResult = await provider.signMessage(encoded);
+        var sigBytes = new Uint8Array(signResult.signature || signResult);
+        sigBase64 = btoa(String.fromCharCode.apply(null, Array.from(sigBytes)));
+      } catch(e) {
+        connectOnly = true;
+      }
+      
+      var authBody = connectOnly
+        ? JSON.stringify({ wallet: publicKey, connectOnly: true })
+        : JSON.stringify({ wallet: publicKey, signature: sigBase64, message: message });
+      
       const authRes = await fetch("https://www.shinirealms.xyz/api/auth/session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ wallet: publicKey, signature: sigBase64, message: message })
+        body: authBody
       });
       const authResult = await authRes.json();
       if (!authResult.sessionToken) throw new Error("Auth failed");
@@ -86,7 +100,7 @@ gdjs.evtsExt__Solflare__Function.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x1043358(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Solflare__Function.userFunc0x18bf3b0(runtimeScene, eventsFunctionContext);
 
 }
 
