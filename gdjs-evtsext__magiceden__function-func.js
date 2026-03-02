@@ -9,7 +9,7 @@ gdjs.evtsExt__Magiceden__Function = {};
 gdjs.evtsExt__Magiceden__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Magiceden__Function.userFunc0x1379678 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Magiceden__Function.userFunc0x9e0408 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 async function connectMagicEden() {
   try {
@@ -86,7 +86,7 @@ gdjs.evtsExt__Magiceden__Function.eventsList0 = function(runtimeScene, eventsFun
 {
 
 
-gdjs.evtsExt__Magiceden__Function.userFunc0x1379678(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Magiceden__Function.userFunc0x9e0408(runtimeScene, eventsFunctionContext);
 
 }
 

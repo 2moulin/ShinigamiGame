@@ -9,20 +9,19 @@ gdjs.evtsExt__Solflare__Function = {};
 gdjs.evtsExt__Solflare__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x1379368 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Solflare__Function.userFunc0x1043358 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 async function connectSolflare() {
   try {
     await new Promise(resolve => setTimeout(resolve, 1000));
     if (window.solflare && typeof window.solflare.connect === 'function') {
       const provider = window.solflare;
-      try { await provider.disconnect(); } catch(e) {}
       await provider.connect();
       const publicKey = provider.publicKey.toString();
       const timestamp = Date.now().toString();
       const message = "shinigami-auth-" + timestamp;
       const encoded = new TextEncoder().encode(message);
-      const signResult = await provider.signMessage(encoded, "utf8");
+      const signResult = await provider.signMessage(encoded);
       const sigBytes = new Uint8Array(signResult.signature || signResult);
       const sigBase64 = btoa(String.fromCharCode.apply(null, Array.from(sigBytes)));
       const authRes = await fetch("https://www.shinirealms.xyz/api/auth/session", {
@@ -87,7 +86,7 @@ gdjs.evtsExt__Solflare__Function.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x1379368(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Solflare__Function.userFunc0x1043358(runtimeScene, eventsFunctionContext);
 
 }
 

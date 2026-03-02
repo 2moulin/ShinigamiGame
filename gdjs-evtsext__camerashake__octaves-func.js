@@ -9,7 +9,7 @@ gdjs.evtsExt__CameraShake__Octaves = {};
 gdjs.evtsExt__CameraShake__Octaves.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CameraShake__Octaves.userFunc0x135e818 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CameraShake__Octaves.userFunc0x19e0d38 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const name = eventsFunctionContext.getArgument("Name");
 
@@ -20,7 +20,7 @@ gdjs.evtsExt__CameraShake__Octaves.eventsList0 = function(runtimeScene, eventsFu
 {
 
 
-gdjs.evtsExt__CameraShake__Octaves.userFunc0x135e818(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CameraShake__Octaves.userFunc0x19e0d38(runtimeScene, eventsFunctionContext);
 
 }
 
