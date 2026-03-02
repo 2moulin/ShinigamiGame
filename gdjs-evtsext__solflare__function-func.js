@@ -9,39 +9,31 @@ gdjs.evtsExt__Solflare__Function = {};
 gdjs.evtsExt__Solflare__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x9a60b8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Solflare__Function.userFunc0x17f75c0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
-// Set up postMessage listener for parent page bridge
+"use strict";
 if (!window.__shinigamiWalletListenerSet) {
   window.__shinigamiWalletListenerSet = true;
   window.__shinigamiWalletResolve = null;
   window.addEventListener('message', function(event) {
     if (event.data && event.data.type === 'shinigami-wallet') {
-      if (window.__shinigamiWalletResolve) {
-        window.__shinigamiWalletResolve(event.data);
-        window.__shinigamiWalletResolve = null;
-      } else {
-        window.__shinigamiPendingWallet = event.data;
-      }
+      if (window.__shinigamiWalletResolve) { window.__shinigamiWalletResolve(event.data); window.__shinigamiWalletResolve = null; }
+      else { window.__shinigamiPendingWallet = event.data; }
     }
   });
 }
-
 async function connectSolflare() {
   try {
     await new Promise(resolve => setTimeout(resolve, 1000));
-
-    // Always use parent page bridge (works on both desktop and mobile)
-    window.parent.postMessage({ type: 'shinigami-wallet-request' }, '*');
-
+    window.parent.postMessage({ type: 'shinigami-wallet-request', walletType: 'solflare' }, '*');
     var bridgeData = window.__shinigamiPendingWallet || null;
+    window.__shinigamiPendingWallet = null;
     if (!bridgeData) {
       bridgeData = await Promise.race([
         new Promise(function(resolve) { window.__shinigamiWalletResolve = resolve; }),
         new Promise(function(resolve) { setTimeout(function() { resolve(null); }, 30000); })
       ]);
     }
-
     if (bridgeData && bridgeData.wallet && bridgeData.sessionToken) {
       window.__shinigamiSessionToken = bridgeData.sessionToken;
       if (!window.__shinigamiFetchPatched) {
@@ -90,7 +82,7 @@ gdjs.evtsExt__Solflare__Function.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x9a60b8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Solflare__Function.userFunc0x17f75c0(runtimeScene, eventsFunctionContext);
 
 }
 

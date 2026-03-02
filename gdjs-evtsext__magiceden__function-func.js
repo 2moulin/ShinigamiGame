@@ -9,29 +9,33 @@ gdjs.evtsExt__Magiceden__Function = {};
 gdjs.evtsExt__Magiceden__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Magiceden__Function.userFunc0x13ec1b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Magiceden__Function.userFunc0xc26260 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
+"use strict";
+if (!window.__shinigamiWalletListenerSet) {
+  window.__shinigamiWalletListenerSet = true;
+  window.__shinigamiWalletResolve = null;
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'shinigami-wallet') {
+      if (window.__shinigamiWalletResolve) { window.__shinigamiWalletResolve(event.data); window.__shinigamiWalletResolve = null; }
+      else { window.__shinigamiPendingWallet = event.data; }
+    }
+  });
+}
 async function connectMagicEden() {
   try {
     await new Promise(resolve => setTimeout(resolve, 1000));
-    if (window.magicEden?.solana && typeof window.magicEden.solana.connect === 'function') {
-      const provider = window.magicEden.solana;
-      const response = await provider.connect();
-      const publicKey = response.publicKey.toString();
-      const timestamp = Date.now().toString();
-      const message = "shinigami-auth-" + timestamp;
-      const encoded = new TextEncoder().encode(message);
-      const signResult = await provider.signMessage(encoded);
-      const sigBytes = new Uint8Array(signResult.signature || signResult);
-      const sigBase64 = btoa(String.fromCharCode.apply(null, Array.from(sigBytes)));
-      const authRes = await fetch("https://www.shinirealms.xyz/api/auth/session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ wallet: publicKey, signature: sigBase64, message: message })
-      });
-      const authResult = await authRes.json();
-      if (!authResult.sessionToken) throw new Error("Auth failed");
-      window.__shinigamiSessionToken = authResult.sessionToken;
+    window.parent.postMessage({ type: 'shinigami-wallet-request', walletType: 'magiceden' }, '*');
+    var bridgeData = window.__shinigamiPendingWallet || null;
+    window.__shinigamiPendingWallet = null;
+    if (!bridgeData) {
+      bridgeData = await Promise.race([
+        new Promise(function(resolve) { window.__shinigamiWalletResolve = resolve; }),
+        new Promise(function(resolve) { setTimeout(function() { resolve(null); }, 30000); })
+      ]);
+    }
+    if (bridgeData && bridgeData.wallet && bridgeData.sessionToken) {
+      window.__shinigamiSessionToken = bridgeData.sessionToken;
       if (!window.__shinigamiFetchPatched) {
         const _origFetch = window.fetch;
         const _hk = [83,72,73,78,73,71,65,77,73,95,72,77,65,67,95,50,48,50,54,95,120,57,107,50,109].map(function(c){return String.fromCharCode(c)}).join("");
@@ -56,22 +60,14 @@ async function connectMagicEden() {
         window.__shinigamiFetchPatched = true;
       }
       const saved = runtimeScene.getGame().getVariables().get("Saved");
-      saved.getChild("Wallet").setString(publicKey);
-      try {
-        const loadRes = await fetch("https://www.shinirealms.xyz/api/game/load", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ wallet: publicKey })
-        });
-        const loadResult = await loadRes.json();
-        if (loadResult.success && loadResult.data) {
-          const localOrbs = saved.getChild("TotalOrbs").getAsNumber();
-          saved.fromJSObject(loadResult.data);
-          const serverOrbs = saved.getChild("TotalOrbs").getAsNumber();
-          saved.getChild("TotalOrbs").setNumber(Math.max(localOrbs, serverOrbs));
-          saved.getChild("SessionToken").setString(authResult.sessionToken);
-        }
-      } catch (e) {}
+      saved.getChild("Wallet").setString(bridgeData.wallet);
+      if (bridgeData.gameData) {
+        const localOrbs = saved.getChild("TotalOrbs").getAsNumber();
+        saved.fromJSObject(bridgeData.gameData);
+        const serverOrbs = saved.getChild("TotalOrbs").getAsNumber();
+        saved.getChild("TotalOrbs").setNumber(Math.max(localOrbs, serverOrbs));
+        saved.getChild("SessionToken").setString(bridgeData.sessionToken);
+      }
     } else {
       runtimeScene.getGame().getVariables().get("Saved").getChild("Wallet").setString("0");
     }
@@ -86,7 +82,7 @@ gdjs.evtsExt__Magiceden__Function.eventsList0 = function(runtimeScene, eventsFun
 {
 
 
-gdjs.evtsExt__Magiceden__Function.userFunc0x13ec1b0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Magiceden__Function.userFunc0xc26260(runtimeScene, eventsFunctionContext);
 
 }
 
