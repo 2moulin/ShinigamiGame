@@ -19,7 +19,7 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle =
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
 
     return true;
@@ -80,13 +80,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.ShakeObject_PositionAngleContext.GDObjectObjects2);
@@ -95,13 +88,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ShakeOb
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -140,13 +126,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ShakeOb
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.ShakeObject_PositionAngleContext.GDObjectObjects2);
@@ -173,13 +152,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ShakeOb
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -236,13 +208,6 @@ if (isConditionTrue_0) {
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.ShakeObject_PositionAngleContext.GDObjectObjects2);
 
 let isConditionTrue_0 = false;
@@ -268,13 +233,6 @@ if (isConditionTrue_0) {
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.ShakeObject_PositionAngleContext.GDObjectObjects2);
 
 let isConditionTrue_0 = false;
@@ -294,13 +252,6 @@ if (isConditionTrue_0) {
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -438,13 +389,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects3, gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects5);
 
 
@@ -532,13 +476,6 @@ if (isConditionTrue_0) {
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -677,20 +614,6 @@ if (isConditionTrue_0) {
 
 {
 
-
-
-}
-
-
-{
-
-
-
-}
-
-
-{
-
 gdjs.copyArray(gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects4, gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects5);
 
 
@@ -709,13 +632,6 @@ if (isConditionTrue_0) {
 { //Subevents
 gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.eventsList1(runtimeScene, eventsFunctionContext);} //End of subevents
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -747,20 +663,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 
 {
 
-
-
-}
-
-
-{
-
-
-
-}
-
-
-{
-
 gdjs.copyArray(gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects4, gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects5);
 
 
@@ -775,20 +677,6 @@ if (isConditionTrue_0) {
 }
 }
 }
-
-}
-
-
-{
-
-
-
-}
-
-
-{
-
-
 
 }
 
@@ -818,13 +706,6 @@ if (isConditionTrue_0) {
 
 
 gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.eventsList0(runtimeScene, eventsFunctionContext);
-}
-
-
-{
-
-
-
 }
 
 
@@ -891,13 +772,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects3, gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects4);
 
 
@@ -923,13 +797,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 /* Reuse gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects3 */
@@ -943,13 +810,6 @@ let isConditionTrue_0 = false;
 
 
 };gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.eventsList6 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -1026,13 +886,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 /* Reuse gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects4 */
@@ -1054,13 +907,6 @@ let isConditionTrue_0 = false;
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 /* Reuse gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects3 */
@@ -1074,13 +920,6 @@ let isConditionTrue_0 = false;
 
 
 };gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.eventsList9 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -1154,13 +993,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 
 {
 
-
-
-}
-
-
-{
-
 /* Reuse gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects3 */
 
 let isConditionTrue_0 = false;
@@ -1186,13 +1018,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 /* Reuse gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects3 */
@@ -1214,13 +1039,6 @@ let isConditionTrue_0 = false;
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 /* Reuse gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects2 */
@@ -1234,13 +1052,6 @@ let isConditionTrue_0 = false;
 
 
 };gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.eventsList12 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -1314,13 +1125,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 
 {
 
-
-
-}
-
-
-{
-
 /* Reuse gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects2 */
 
 let isConditionTrue_0 = false;
@@ -1346,13 +1150,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects2, gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects3);
@@ -1362,13 +1159,6 @@ gdjs.copyArray(gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -1399,13 +1189,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 
 {
 
-
-
-}
-
-
-{
-
 /* Reuse gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects2 */
 
 let isConditionTrue_0 = false;
@@ -1428,13 +1211,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 
 
 };gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.eventsList14 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -1506,13 +1282,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 
 
 };gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.eventsList16 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -1610,13 +1379,6 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 /* Reuse gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.GDObjectObjects1 */
@@ -1647,13 +1409,6 @@ gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.p
 
 
 };gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_PositionAngle.prototype.doStepPostEventsContext.eventsList18 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -1707,7 +1462,7 @@ gdjs.copyArray(gdjs.evtsExt__ShakeObject__ShakeObject_PositionAngle.ShakeObject_
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(28412740);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(28478084);
 }
 }
 if (isConditionTrue_0) {

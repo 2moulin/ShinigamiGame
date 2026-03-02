@@ -84,13 +84,6 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.localVariables[0].getFromIndex(0).getAsNumber() != 0);
@@ -181,13 +174,6 @@ if (isConditionTrue_0) {
 {eventsFunctionContext.localVariables[0].getFromIndex(5).setString("");
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -358,13 +344,6 @@ eventsFunctionContext.localVariables.pop();
 
 
 };gdjs.evtsExt__CameraShake__onScenePostEvents.eventsList4 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 

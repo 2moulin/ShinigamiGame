@@ -9,7 +9,7 @@ gdjs.evtsExt__WalletConnection__Function = {};
 gdjs.evtsExt__WalletConnection__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__WalletConnection__Function.userFunc0xc51100 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__WalletConnection__Function.userFunc0x13790b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 async function connectPhantom() {
   try {
@@ -86,7 +86,7 @@ gdjs.evtsExt__WalletConnection__Function.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__WalletConnection__Function.userFunc0xc51100(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__WalletConnection__Function.userFunc0x13790b0(runtimeScene, eventsFunctionContext);
 
 }
 

@@ -24,18 +24,18 @@ gdjs.evtsExt__FlashTransitionPainter__FlashTransitionPainter.FlashTransitionPain
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.Progress !== newBehaviorData.Progress)
-      this._behaviorData.Progress = newBehaviorData.Progress;
-    if (oldBehaviorData.Duration !== newBehaviorData.Duration)
-      this._behaviorData.Duration = newBehaviorData.Duration;
-    if (oldBehaviorData.Type !== newBehaviorData.Type)
-      this._behaviorData.Type = newBehaviorData.Type;
-    if (oldBehaviorData.Direction !== newBehaviorData.Direction)
-      this._behaviorData.Direction = newBehaviorData.Direction;
-    if (oldBehaviorData.MaxOpacity !== newBehaviorData.MaxOpacity)
-      this._behaviorData.MaxOpacity = newBehaviorData.MaxOpacity;
+    if (behaviorOverriding.Progress !== undefined)
+      this._behaviorData.Progress = behaviorOverriding.Progress;
+    if (behaviorOverriding.Duration !== undefined)
+      this._behaviorData.Duration = behaviorOverriding.Duration;
+    if (behaviorOverriding.Type !== undefined)
+      this._behaviorData.Type = behaviorOverriding.Type;
+    if (behaviorOverriding.Direction !== undefined)
+      this._behaviorData.Direction = behaviorOverriding.Direction;
+    if (behaviorOverriding.MaxOpacity !== undefined)
+      this._behaviorData.MaxOpacity = behaviorOverriding.MaxOpacity;
 
     return true;
   }
@@ -264,13 +264,6 @@ gdjs.copyArray(gdjs.evtsExt__FlashTransitionPainter__FlashTransitionPainter.Flas
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getType() == "Horizontal");
@@ -292,13 +285,6 @@ gdjs.copyArray(gdjs.evtsExt__FlashTransitionPainter__FlashTransitionPainter.Flas
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getType() == "Vertical");
@@ -316,13 +302,6 @@ gdjs.copyArray(gdjs.evtsExt__FlashTransitionPainter__FlashTransitionPainter.Flas
 
 
 };gdjs.evtsExt__FlashTransitionPainter__FlashTransitionPainter.FlashTransitionPainter.prototype.doStepPostEventsContext.eventsList3 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -377,16 +356,9 @@ gdjs.evtsExt__FlashTransitionPainter__FlashTransitionPainter.FlashTransitionPain
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(28145564);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(28209004);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__FlashTransitionPainter__FlashTransitionPainter.FlashTransitionPainter.prototype.doStepPostEventsContext.GDObjectObjects1);
@@ -658,13 +630,6 @@ if (isConditionTrue_0) {
 
 
 };gdjs.evtsExt__FlashTransitionPainter__FlashTransitionPainter.FlashTransitionPainter.prototype.PaintEffectContext.eventsList1 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 

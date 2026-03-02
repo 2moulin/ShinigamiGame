@@ -30,13 +30,6 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, eventsFunctionContext.getArgument("TimerName")) >= eventsFunctionContext.getArgument("LoopDuration");

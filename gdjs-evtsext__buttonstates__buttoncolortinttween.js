@@ -29,28 +29,28 @@ gdjs.evtsExt__ButtonStates__ButtonColorTintTween.ButtonColorTintTween = class Bu
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.ButtonFSM !== newBehaviorData.ButtonFSM)
-      this._behaviorData.ButtonFSM = newBehaviorData.ButtonFSM;
-    if (oldBehaviorData.Tween !== newBehaviorData.Tween)
-      this._behaviorData.Tween = newBehaviorData.Tween;
-    if (oldBehaviorData.IdleColorTint !== newBehaviorData.IdleColorTint)
-      this._behaviorData.IdleColorTint = newBehaviorData.IdleColorTint;
-    if (oldBehaviorData.FocusedColorTint !== newBehaviorData.FocusedColorTint)
-      this._behaviorData.FocusedColorTint = newBehaviorData.FocusedColorTint;
-    if (oldBehaviorData.PressedColorTint !== newBehaviorData.PressedColorTint)
-      this._behaviorData.PressedColorTint = newBehaviorData.PressedColorTint;
-    if (oldBehaviorData.FadeInDuration !== newBehaviorData.FadeInDuration)
-      this._behaviorData.FadeInDuration = newBehaviorData.FadeInDuration;
-    if (oldBehaviorData.FadeOutDuration !== newBehaviorData.FadeOutDuration)
-      this._behaviorData.FadeOutDuration = newBehaviorData.FadeOutDuration;
-    if (oldBehaviorData.FadeInEasing !== newBehaviorData.FadeInEasing)
-      this._behaviorData.FadeInEasing = newBehaviorData.FadeInEasing;
-    if (oldBehaviorData.FadeOutEasing !== newBehaviorData.FadeOutEasing)
-      this._behaviorData.FadeOutEasing = newBehaviorData.FadeOutEasing;
-    if (oldBehaviorData.PreviousState !== newBehaviorData.PreviousState)
-      this._behaviorData.PreviousState = newBehaviorData.PreviousState;
+    if (behaviorOverriding.ButtonFSM !== undefined)
+      this._behaviorData.ButtonFSM = behaviorOverriding.ButtonFSM;
+    if (behaviorOverriding.Tween !== undefined)
+      this._behaviorData.Tween = behaviorOverriding.Tween;
+    if (behaviorOverriding.IdleColorTint !== undefined)
+      this._behaviorData.IdleColorTint = behaviorOverriding.IdleColorTint;
+    if (behaviorOverriding.FocusedColorTint !== undefined)
+      this._behaviorData.FocusedColorTint = behaviorOverriding.FocusedColorTint;
+    if (behaviorOverriding.PressedColorTint !== undefined)
+      this._behaviorData.PressedColorTint = behaviorOverriding.PressedColorTint;
+    if (behaviorOverriding.FadeInDuration !== undefined)
+      this._behaviorData.FadeInDuration = behaviorOverriding.FadeInDuration;
+    if (behaviorOverriding.FadeOutDuration !== undefined)
+      this._behaviorData.FadeOutDuration = behaviorOverriding.FadeOutDuration;
+    if (behaviorOverriding.FadeInEasing !== undefined)
+      this._behaviorData.FadeInEasing = behaviorOverriding.FadeInEasing;
+    if (behaviorOverriding.FadeOutEasing !== undefined)
+      this._behaviorData.FadeOutEasing = behaviorOverriding.FadeOutEasing;
+    if (behaviorOverriding.PreviousState !== undefined)
+      this._behaviorData.PreviousState = behaviorOverriding.PreviousState;
 
     return true;
   }

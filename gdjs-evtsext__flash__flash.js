@@ -22,14 +22,14 @@ gdjs.evtsExt__Flash__Flash.Flash = class Flash extends gdjs.RuntimeBehavior {
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.HalfPeriodTime !== newBehaviorData.HalfPeriodTime)
-      this._behaviorData.HalfPeriodTime = newBehaviorData.HalfPeriodTime;
-    if (oldBehaviorData.IsFlashing !== newBehaviorData.IsFlashing)
-      this._behaviorData.IsFlashing = newBehaviorData.IsFlashing;
-    if (oldBehaviorData.FlashDuration !== newBehaviorData.FlashDuration)
-      this._behaviorData.FlashDuration = newBehaviorData.FlashDuration;
+    if (behaviorOverriding.HalfPeriodTime !== undefined)
+      this._behaviorData.HalfPeriodTime = behaviorOverriding.HalfPeriodTime;
+    if (behaviorOverriding.IsFlashing !== undefined)
+      this._behaviorData.IsFlashing = behaviorOverriding.IsFlashing;
+    if (behaviorOverriding.FlashDuration !== undefined)
+      this._behaviorData.FlashDuration = behaviorOverriding.FlashDuration;
 
     return true;
   }

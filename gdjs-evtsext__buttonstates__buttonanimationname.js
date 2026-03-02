@@ -24,18 +24,18 @@ gdjs.evtsExt__ButtonStates__ButtonAnimationName.ButtonAnimationName = class Butt
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.Animation !== newBehaviorData.Animation)
-      this._behaviorData.Animation = newBehaviorData.Animation;
-    if (oldBehaviorData.ButtonFSM !== newBehaviorData.ButtonFSM)
-      this._behaviorData.ButtonFSM = newBehaviorData.ButtonFSM;
-    if (oldBehaviorData.IdleAnimationName !== newBehaviorData.IdleAnimationName)
-      this._behaviorData.IdleAnimationName = newBehaviorData.IdleAnimationName;
-    if (oldBehaviorData.FocusedAnimationName !== newBehaviorData.FocusedAnimationName)
-      this._behaviorData.FocusedAnimationName = newBehaviorData.FocusedAnimationName;
-    if (oldBehaviorData.PressedAnimationName !== newBehaviorData.PressedAnimationName)
-      this._behaviorData.PressedAnimationName = newBehaviorData.PressedAnimationName;
+    if (behaviorOverriding.Animation !== undefined)
+      this._behaviorData.Animation = behaviorOverriding.Animation;
+    if (behaviorOverriding.ButtonFSM !== undefined)
+      this._behaviorData.ButtonFSM = behaviorOverriding.ButtonFSM;
+    if (behaviorOverriding.IdleAnimationName !== undefined)
+      this._behaviorData.IdleAnimationName = behaviorOverriding.IdleAnimationName;
+    if (behaviorOverriding.FocusedAnimationName !== undefined)
+      this._behaviorData.FocusedAnimationName = behaviorOverriding.FocusedAnimationName;
+    if (behaviorOverriding.PressedAnimationName !== undefined)
+      this._behaviorData.PressedAnimationName = behaviorOverriding.PressedAnimationName;
 
     return true;
   }

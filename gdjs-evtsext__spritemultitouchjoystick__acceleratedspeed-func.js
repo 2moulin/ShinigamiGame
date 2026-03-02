@@ -14,13 +14,6 @@ gdjs.evtsExt__SpriteMultitouchJoystick__AcceleratedSpeed.eventsList0 = function(
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getArgument("CurrentSpeed") < eventsFunctionContext.getArgument("TargetedSpeed"));
@@ -56,13 +49,6 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getArgument("CurrentSpeed") >= 0);
@@ -76,13 +62,6 @@ if (isConditionTrue_0) {
 
 
 };gdjs.evtsExt__SpriteMultitouchJoystick__AcceleratedSpeed.eventsList1 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -115,13 +94,6 @@ if (isConditionTrue_0) {
 {eventsFunctionContext.localVariables[0].getFromIndex(0).add(eventsFunctionContext.getArgument("Acceleration") * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene));
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

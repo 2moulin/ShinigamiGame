@@ -195,13 +195,6 @@ eventsFunctionContext.localVariables.pop();
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__CameraShake__IsShaking.func(runtimeScene, eventsFunctionContext);

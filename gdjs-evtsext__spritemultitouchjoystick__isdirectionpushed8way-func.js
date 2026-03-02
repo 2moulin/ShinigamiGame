@@ -14,13 +14,6 @@ gdjs.evtsExt__SpriteMultitouchJoystick__IsDirectionPushed8Way.eventsList0 = func
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__JoystickForce.func(runtimeScene, eventsFunctionContext.getArgument("ControllerIdentifier"), eventsFunctionContext.getArgument("JoystickIdentifier"), 0, eventsFunctionContext) > 0;

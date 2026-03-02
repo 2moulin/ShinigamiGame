@@ -9,7 +9,7 @@ gdjs.evtsExt__Glow__Function = {};
 gdjs.evtsExt__Glow__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Glow__Function.userFunc0xc51100 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Glow__Function.userFunc0x1379890 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 async function connectGlow() {
   try {
@@ -86,7 +86,7 @@ gdjs.evtsExt__Glow__Function.eventsList0 = function(runtimeScene, eventsFunction
 {
 
 
-gdjs.evtsExt__Glow__Function.userFunc0xc51100(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Glow__Function.userFunc0x1379890(runtimeScene, eventsFunctionContext);
 
 }
 

@@ -23,16 +23,16 @@ gdjs.evtsExt__RepeatEveryXSeconds__RepeatTimer.RepeatTimer = class RepeatTimer e
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.TimerName !== newBehaviorData.TimerName)
-      this._behaviorData.TimerName = newBehaviorData.TimerName;
-    if (oldBehaviorData.TimerLength !== newBehaviorData.TimerLength)
-      this._behaviorData.TimerLength = newBehaviorData.TimerLength;
-    if (oldBehaviorData.Limit !== newBehaviorData.Limit)
-      this._behaviorData.Limit = newBehaviorData.Limit;
-    if (oldBehaviorData.Counter !== newBehaviorData.Counter)
-      this._behaviorData.Counter = newBehaviorData.Counter;
+    if (behaviorOverriding.TimerName !== undefined)
+      this._behaviorData.TimerName = behaviorOverriding.TimerName;
+    if (behaviorOverriding.TimerLength !== undefined)
+      this._behaviorData.TimerLength = behaviorOverriding.TimerLength;
+    if (behaviorOverriding.Limit !== undefined)
+      this._behaviorData.Limit = behaviorOverriding.Limit;
+    if (behaviorOverriding.Counter !== undefined)
+      this._behaviorData.Counter = behaviorOverriding.Counter;
 
     return true;
   }
@@ -248,13 +248,6 @@ if (isConditionTrue_0) {
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

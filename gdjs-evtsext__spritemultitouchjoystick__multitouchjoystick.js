@@ -26,22 +26,22 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick = 
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.ControllerIdentifier !== newBehaviorData.ControllerIdentifier)
-      this._behaviorData.ControllerIdentifier = newBehaviorData.ControllerIdentifier;
-    if (oldBehaviorData.JoystickIdentifier !== newBehaviorData.JoystickIdentifier)
-      this._behaviorData.JoystickIdentifier = newBehaviorData.JoystickIdentifier;
-    if (oldBehaviorData.DeadZoneRadius !== newBehaviorData.DeadZoneRadius)
-      this._behaviorData.DeadZoneRadius = newBehaviorData.DeadZoneRadius;
-    if (oldBehaviorData.JoystickAngle !== newBehaviorData.JoystickAngle)
-      this._behaviorData.JoystickAngle = newBehaviorData.JoystickAngle;
-    if (oldBehaviorData.JoystickForce !== newBehaviorData.JoystickForce)
-      this._behaviorData.JoystickForce = newBehaviorData.JoystickForce;
-    if (oldBehaviorData.TouchId !== newBehaviorData.TouchId)
-      this._behaviorData.TouchId = newBehaviorData.TouchId;
-    if (oldBehaviorData.TouchIndex !== newBehaviorData.TouchIndex)
-      this._behaviorData.TouchIndex = newBehaviorData.TouchIndex;
+    if (behaviorOverriding.ControllerIdentifier !== undefined)
+      this._behaviorData.ControllerIdentifier = behaviorOverriding.ControllerIdentifier;
+    if (behaviorOverriding.JoystickIdentifier !== undefined)
+      this._behaviorData.JoystickIdentifier = behaviorOverriding.JoystickIdentifier;
+    if (behaviorOverriding.DeadZoneRadius !== undefined)
+      this._behaviorData.DeadZoneRadius = behaviorOverriding.DeadZoneRadius;
+    if (behaviorOverriding.JoystickAngle !== undefined)
+      this._behaviorData.JoystickAngle = behaviorOverriding.JoystickAngle;
+    if (behaviorOverriding.JoystickForce !== undefined)
+      this._behaviorData.JoystickForce = behaviorOverriding.JoystickForce;
+    if (behaviorOverriding.TouchId !== undefined)
+      this._behaviorData.TouchId = behaviorOverriding.TouchId;
+    if (behaviorOverriding.TouchIndex !== undefined)
+      this._behaviorData.TouchIndex = behaviorOverriding.TouchIndex;
 
     return true;
   }
@@ -437,13 +437,6 @@ if (isConditionTrue_0) {
 { //Subevents
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.doStepPreEventsContext.eventsList1(runtimeScene, eventsFunctionContext);} //End of subevents
 }
-
-}
-
-
-{
-
-
 
 }
 

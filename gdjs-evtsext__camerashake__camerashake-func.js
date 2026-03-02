@@ -91,13 +91,6 @@ gdjs.evtsExt__CameraShake__CameraShake.eventsList0(runtimeScene, eventsFunctionC
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = eventsFunctionContext.getArgument("ShakeForever");
@@ -106,13 +99,6 @@ if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).setNumber(1234567890);
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

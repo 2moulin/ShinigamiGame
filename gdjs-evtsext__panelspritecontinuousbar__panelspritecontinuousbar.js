@@ -5,8 +5,8 @@ gdjs.evtsExt__PanelSpriteContinuousBar__PanelSpriteContinuousBar = gdjs.evtsExt_
  * Object generated from Resource bar (continuous)
  */
 gdjs.evtsExt__PanelSpriteContinuousBar__PanelSpriteContinuousBar.PanelSpriteContinuousBar = class PanelSpriteContinuousBar extends gdjs.CustomRuntimeObject2D {
-  constructor(parentInstanceContainer, objectData) {
-    super(parentInstanceContainer, objectData);
+  constructor(parentInstanceContainer, objectData, instanceData) {
+    super(parentInstanceContainer, objectData, instanceData);
     this._parentInstanceContainer = parentInstanceContainer;
 
     this._onceTriggers = new gdjs.OnceTriggers();
@@ -186,13 +186,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__PanelSp
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Buffer"), gdjs.evtsExt__PanelSpriteContinuousBar__PanelSpriteContinuousBar.PanelSpriteContinuousBar.prototype.onCreatedContext.GDBufferObjects1);
@@ -216,25 +209,11 @@ gdjs.evtsExt__PanelSpriteContinuousBar__PanelSpriteContinuousBar.PanelSpriteCont
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 {eventsFunctionContext.getObjects("Object")[0]._setPreviousInitialValue(eventsFunctionContext.getObjects("Object")[0]._getInitialValue())
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -260,13 +239,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Buffer"), gdjs.evtsExt__PanelSp
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = !eventsFunctionContext.getObjects("Object")[0]._getShowLabel();
@@ -278,13 +250,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Label"), gdjs.evtsExt__PanelSpr
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -717,7 +682,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__PanelSpriteContinuousBar__PanelSpriteCo
 gdjs.evtsExt__PanelSpriteContinuousBar__PanelSpriteContinuousBar.PanelSpriteContinuousBar.prototype.doStepPostEventsContext.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(28320980);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(28385812);
 }
 }
 if (isConditionTrue_0) {

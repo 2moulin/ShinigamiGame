@@ -45,13 +45,6 @@ gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList0 = function(runtimeSc
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects3, gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects4);
 
 
@@ -79,13 +72,6 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 /* Reuse gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects3 */
@@ -99,13 +85,6 @@ let isConditionTrue_0 = false;
 
 
 };gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList1 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -136,13 +115,6 @@ gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList2 = function(runtimeSc
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects4, gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects5);
@@ -167,13 +139,6 @@ gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDShadowCloneObjectObjects5.leng
 
 
 };gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList3 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -407,13 +372,6 @@ gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDShadowCloneObje
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects4, gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects5);
@@ -453,13 +411,6 @@ gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDShadowCloneObje
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = eventsFunctionContext.getArgument("MatchScaleX");
@@ -479,13 +430,6 @@ gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDShadowCloneObje
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -609,13 +553,6 @@ gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList5(runtimeScene, events
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getArgument("FadeSpeed") != 0);
@@ -658,13 +595,6 @@ gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDShadowCloneObje
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getArgument("ShrinkSpeed") != 0);
@@ -674,13 +604,6 @@ if (isConditionTrue_0) {
 { //Subevents
 gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList6(runtimeScene, eventsFunctionContext);} //End of subevents
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -752,13 +675,6 @@ gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList7(runtimeScene, events
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects5, gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects6);
@@ -821,13 +737,6 @@ gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectOb
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects2, gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects4);
@@ -882,13 +791,6 @@ gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList9(runtimeScene, events
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects2, gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectObjects4);
@@ -898,13 +800,6 @@ gdjs.copyArray(gdjs.evtsExt__ShadowClones__AnimateShadowClones.GDPrimaryObjectOb
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -935,13 +830,6 @@ gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList10(runtimeScene, event
 }
 } else stopDoWhile_0 = true; 
 } while (!stopDoWhile_0);
-
-}
-
-
-{
-
-
 
 }
 
@@ -1157,13 +1045,6 @@ gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList12(runtimeScene, event
 
 
 gdjs.evtsExt__ShadowClones__AnimateShadowClones.eventsList13(runtimeScene, eventsFunctionContext);
-}
-
-
-{
-
-
-
 }
 
 

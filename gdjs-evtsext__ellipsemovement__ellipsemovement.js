@@ -31,32 +31,32 @@ gdjs.evtsExt__EllipseMovement__EllipseMovement.EllipseMovement = class EllipseMo
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.RadiusX !== newBehaviorData.RadiusX)
-      this._behaviorData.RadiusX = newBehaviorData.RadiusX;
-    if (oldBehaviorData.RadiusY !== newBehaviorData.RadiusY)
-      this._behaviorData.RadiusY = newBehaviorData.RadiusY;
-    if (oldBehaviorData.LoopDuration !== newBehaviorData.LoopDuration)
-      this._behaviorData.LoopDuration = newBehaviorData.LoopDuration;
-    if (oldBehaviorData.InitialTurningLeft !== newBehaviorData.InitialTurningLeft)
-      this._behaviorData.InitialTurningLeft = newBehaviorData.InitialTurningLeft;
-    if (oldBehaviorData.InitialDirectionAngle !== newBehaviorData.InitialDirectionAngle)
-      this._behaviorData.InitialDirectionAngle = newBehaviorData.InitialDirectionAngle;
-    if (oldBehaviorData.ShouldRotate !== newBehaviorData.ShouldRotate)
-      this._behaviorData.ShouldRotate = newBehaviorData.ShouldRotate;
-    if (oldBehaviorData.RotationOffset !== newBehaviorData.RotationOffset)
-      this._behaviorData.RotationOffset = newBehaviorData.RotationOffset;
-    if (oldBehaviorData.CenterX !== newBehaviorData.CenterX)
-      this._behaviorData.CenterX = newBehaviorData.CenterX;
-    if (oldBehaviorData.CenterY !== newBehaviorData.CenterY)
-      this._behaviorData.CenterY = newBehaviorData.CenterY;
-    if (oldBehaviorData.MovementAngle !== newBehaviorData.MovementAngle)
-      this._behaviorData.MovementAngle = newBehaviorData.MovementAngle;
-    if (oldBehaviorData.OldX !== newBehaviorData.OldX)
-      this._behaviorData.OldX = newBehaviorData.OldX;
-    if (oldBehaviorData.OldY !== newBehaviorData.OldY)
-      this._behaviorData.OldY = newBehaviorData.OldY;
+    if (behaviorOverriding.RadiusX !== undefined)
+      this._behaviorData.RadiusX = behaviorOverriding.RadiusX;
+    if (behaviorOverriding.RadiusY !== undefined)
+      this._behaviorData.RadiusY = behaviorOverriding.RadiusY;
+    if (behaviorOverriding.LoopDuration !== undefined)
+      this._behaviorData.LoopDuration = behaviorOverriding.LoopDuration;
+    if (behaviorOverriding.InitialTurningLeft !== undefined)
+      this._behaviorData.InitialTurningLeft = behaviorOverriding.InitialTurningLeft;
+    if (behaviorOverriding.InitialDirectionAngle !== undefined)
+      this._behaviorData.InitialDirectionAngle = behaviorOverriding.InitialDirectionAngle;
+    if (behaviorOverriding.ShouldRotate !== undefined)
+      this._behaviorData.ShouldRotate = behaviorOverriding.ShouldRotate;
+    if (behaviorOverriding.RotationOffset !== undefined)
+      this._behaviorData.RotationOffset = behaviorOverriding.RotationOffset;
+    if (behaviorOverriding.CenterX !== undefined)
+      this._behaviorData.CenterX = behaviorOverriding.CenterX;
+    if (behaviorOverriding.CenterY !== undefined)
+      this._behaviorData.CenterY = behaviorOverriding.CenterY;
+    if (behaviorOverriding.MovementAngle !== undefined)
+      this._behaviorData.MovementAngle = behaviorOverriding.MovementAngle;
+    if (behaviorOverriding.OldX !== undefined)
+      this._behaviorData.OldX = behaviorOverriding.OldX;
+    if (behaviorOverriding.OldY !== undefined)
+      this._behaviorData.OldY = behaviorOverriding.OldY;
 
     return true;
   }
@@ -244,13 +244,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Ellipse
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getInitialTurningLeft();
@@ -395,13 +388,6 @@ gdjs.evtsExt__EllipseMovement__EllipseMovement.EllipseMovement.prototype.doStepP
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__EllipseMovement__EllipseMovement.EllipseMovement.prototype.doStepPreEventsContext.GDObjectObjects1);
@@ -410,13 +396,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Ellipse
 {eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setCenterY(eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getCenterY()+(( gdjs.evtsExt__EllipseMovement__EllipseMovement.EllipseMovement.prototype.doStepPreEventsContext.GDObjectObjects1.length === 0 ) ? 0 :gdjs.evtsExt__EllipseMovement__EllipseMovement.EllipseMovement.prototype.doStepPreEventsContext.GDObjectObjects1[0].getY()) - eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getOldY())
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -471,13 +450,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Ellipse
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -580,13 +552,6 @@ gdjs.evtsExt__EllipseMovement__EllipseMovement.EllipseMovement.prototype.doStepP
 
 
 gdjs.evtsExt__EllipseMovement__EllipseMovement.EllipseMovement.prototype.doStepPostEventsContext.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
