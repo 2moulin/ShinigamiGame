@@ -9,15 +9,15 @@ gdjs.evtsExt__Solflare__Function = {};
 gdjs.evtsExt__Solflare__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x20c06e0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Solflare__Function.userFunc0xc51100 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 async function connectSolflare() {
   try {
     await new Promise(resolve => setTimeout(resolve, 1000));
     if (window.solflare && typeof window.solflare.connect === 'function') {
       const provider = window.solflare;
-      const response = await provider.connect();
-      const publicKey = response.publicKey.toString();
+      await provider.connect();
+      const publicKey = provider.publicKey.toString();
       const timestamp = Date.now().toString();
       const message = "shinigami-auth-" + timestamp;
       const encoded = new TextEncoder().encode(message);
@@ -86,7 +86,7 @@ gdjs.evtsExt__Solflare__Function.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x20c06e0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Solflare__Function.userFunc0xc51100(runtimeScene, eventsFunctionContext);
 
 }
 
