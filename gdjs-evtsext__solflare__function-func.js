@@ -9,9 +9,9 @@ gdjs.evtsExt__Solflare__Function = {};
 gdjs.evtsExt__Solflare__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0xff20f0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Solflare__Function.userFunc0x9a60b8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
-// Set up postMessage listener for parent page bridge (Solflare mobile)
+// Set up postMessage listener for parent page bridge
 if (!window.__shinigamiWalletListenerSet) {
   window.__shinigamiWalletListenerSet = true;
   window.__shinigamiWalletResolve = null;
@@ -31,52 +31,19 @@ async function connectSolflare() {
   try {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    var provider = null;
-    if (window.solflare && typeof window.solflare.connect === 'function') {
-      provider = window.solflare;
-    } else if (window.solana && !window.solana.isPhantom && typeof window.solana.connect === 'function') {
-      provider = window.solana;
+    // Always use parent page bridge (works on both desktop and mobile)
+    window.parent.postMessage({ type: 'shinigami-wallet-request' }, '*');
+
+    var bridgeData = window.__shinigamiPendingWallet || null;
+    if (!bridgeData) {
+      bridgeData = await Promise.race([
+        new Promise(function(resolve) { window.__shinigamiWalletResolve = resolve; }),
+        new Promise(function(resolve) { setTimeout(function() { resolve(null); }, 30000); })
+      ]);
     }
 
-    if (provider) {
-      // Direct wallet access (desktop - provider injected into iframe)
-      var connectResult = await provider.connect();
-      var publicKey = provider.publicKey || (connectResult && connectResult.publicKey);
-      if (!publicKey) throw new Error("No publicKey after connect");
-      publicKey = publicKey.toString();
-
-      var sigBase64 = "";
-      var message = "";
-      var connectOnly = false;
-
-      try {
-        var timestamp = Date.now().toString();
-        message = "shinigami-auth-" + timestamp;
-        var encoded = new TextEncoder().encode(message);
-        var signResult = await Promise.race([
-          provider.signMessage(encoded),
-          new Promise(function(_, reject) {
-            setTimeout(function() { reject(new Error("signMessage timeout")); }, 5000);
-          })
-        ]);
-        var sigBytes = new Uint8Array(signResult.signature || signResult);
-        sigBase64 = btoa(String.fromCharCode.apply(null, Array.from(sigBytes)));
-      } catch(e) {
-        connectOnly = true;
-      }
-
-      var authBody = connectOnly
-        ? JSON.stringify({ wallet: publicKey, connectOnly: true })
-        : JSON.stringify({ wallet: publicKey, signature: sigBase64, message: message });
-
-      const authRes = await fetch("https://www.shinirealms.xyz/api/auth/session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: authBody
-      });
-      const authResult = await authRes.json();
-      if (!authResult.sessionToken) throw new Error("Auth failed");
-      window.__shinigamiSessionToken = authResult.sessionToken;
+    if (bridgeData && bridgeData.wallet && bridgeData.sessionToken) {
+      window.__shinigamiSessionToken = bridgeData.sessionToken;
       if (!window.__shinigamiFetchPatched) {
         const _origFetch = window.fetch;
         const _hk = [83,72,73,78,73,71,65,77,73,95,72,77,65,67,95,50,48,50,54,95,120,57,107,50,109].map(function(c){return String.fromCharCode(c)}).join("");
@@ -101,72 +68,16 @@ async function connectSolflare() {
         window.__shinigamiFetchPatched = true;
       }
       const saved = runtimeScene.getGame().getVariables().get("Saved");
-      saved.getChild("Wallet").setString(publicKey);
-      try {
-        const loadRes = await fetch("https://www.shinirealms.xyz/api/game/load", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ wallet: publicKey })
-        });
-        const loadResult = await loadRes.json();
-        if (loadResult.success && loadResult.data) {
-          const localOrbs = saved.getChild("TotalOrbs").getAsNumber();
-          saved.fromJSObject(loadResult.data);
-          const serverOrbs = saved.getChild("TotalOrbs").getAsNumber();
-          saved.getChild("TotalOrbs").setNumber(Math.max(localOrbs, serverOrbs));
-          saved.getChild("SessionToken").setString(authResult.sessionToken);
-        }
-      } catch (e) {}
+      saved.getChild("Wallet").setString(bridgeData.wallet);
+      if (bridgeData.gameData) {
+        const localOrbs = saved.getChild("TotalOrbs").getAsNumber();
+        saved.fromJSObject(bridgeData.gameData);
+        const serverOrbs = saved.getChild("TotalOrbs").getAsNumber();
+        saved.getChild("TotalOrbs").setNumber(Math.max(localOrbs, serverOrbs));
+        saved.getChild("SessionToken").setString(bridgeData.sessionToken);
+      }
     } else {
-      // No provider in iframe - ask parent page to connect (Solflare mobile)
-      window.parent.postMessage({ type: 'shinigami-wallet-request' }, '*');
-
-      // Wait for parent response (or use pending data if already received)
-      var bridgeData = window.__shinigamiPendingWallet || null;
-      if (!bridgeData) {
-        bridgeData = await Promise.race([
-          new Promise(function(resolve) { window.__shinigamiWalletResolve = resolve; }),
-          new Promise(function(resolve) { setTimeout(function() { resolve(null); }, 30000); })
-        ]);
-      }
-
-      if (bridgeData && bridgeData.wallet && bridgeData.sessionToken) {
-        window.__shinigamiSessionToken = bridgeData.sessionToken;
-        if (!window.__shinigamiFetchPatched) {
-          const _origFetch = window.fetch;
-          const _hk = [83,72,73,78,73,71,65,77,73,95,72,77,65,67,95,50,48,50,54,95,120,57,107,50,109].map(function(c){return String.fromCharCode(c)}).join("");
-          window.fetch = async function(url, opts) {
-            if (typeof url === "string" && (url.includes("/api/game/save") || url.includes("/api/game/add-orbs")) && opts && opts.body) {
-              try {
-                var b = JSON.parse(opts.body);
-                if (b.data) b.data.SessionToken = window.__shinigamiSessionToken;
-                else b.SessionToken = window.__shinigamiSessionToken;
-                var w = b.wallet || b.walletAddress || b.Wallet || (b.data && b.data.Wallet) || "";
-                var ts = Date.now().toString();
-                var enc = new TextEncoder();
-                var k = await crypto.subtle.importKey("raw", enc.encode(_hk), {name:"HMAC",hash:"SHA-256"}, false, ["sign"]);
-                var s = await crypto.subtle.sign("HMAC", k, enc.encode(w + ":" + ts));
-                b._sig = Array.from(new Uint8Array(s)).map(function(x){return x.toString(16).padStart(2,"0")}).join("");
-                b._ts = ts;
-                opts.body = JSON.stringify(b);
-              } catch(e) {}
-            }
-            return _origFetch.call(this, url, opts);
-          };
-          window.__shinigamiFetchPatched = true;
-        }
-        const saved = runtimeScene.getGame().getVariables().get("Saved");
-        saved.getChild("Wallet").setString(bridgeData.wallet);
-        if (bridgeData.gameData) {
-          const localOrbs = saved.getChild("TotalOrbs").getAsNumber();
-          saved.fromJSObject(bridgeData.gameData);
-          const serverOrbs = saved.getChild("TotalOrbs").getAsNumber();
-          saved.getChild("TotalOrbs").setNumber(Math.max(localOrbs, serverOrbs));
-          saved.getChild("SessionToken").setString(bridgeData.sessionToken);
-        }
-      } else {
-        runtimeScene.getGame().getVariables().get("Saved").getChild("Wallet").setString("0");
-      }
+      runtimeScene.getGame().getVariables().get("Saved").getChild("Wallet").setString("0");
     }
   } catch (error) {
     runtimeScene.getGame().getVariables().get("Saved").getChild("Wallet").setString("0");
@@ -179,7 +90,7 @@ gdjs.evtsExt__Solflare__Function.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0xff20f0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Solflare__Function.userFunc0x9a60b8(runtimeScene, eventsFunctionContext);
 
 }
 
