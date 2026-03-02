@@ -9,35 +9,49 @@ gdjs.evtsExt__Solflare__Function = {};
 gdjs.evtsExt__Solflare__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x18bf3b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Solflare__Function.userFunc0x13ec1b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 async function connectSolflare() {
   try {
     await new Promise(resolve => setTimeout(resolve, 1000));
+
+    var provider = null;
     if (window.solflare && typeof window.solflare.connect === 'function') {
-      const provider = window.solflare;
-      await provider.connect();
-      const publicKey = provider.publicKey.toString();
-      
+      provider = window.solflare;
+    } else if (window.solana && !window.solana.isPhantom && typeof window.solana.connect === 'function') {
+      provider = window.solana;
+    }
+
+    if (provider) {
+      var connectResult = await provider.connect();
+      var publicKey = provider.publicKey || (connectResult && connectResult.publicKey);
+      if (!publicKey) throw new Error("No publicKey after connect");
+      publicKey = publicKey.toString();
+
       var sigBase64 = "";
       var message = "";
       var connectOnly = false;
-      
+
       try {
         var timestamp = Date.now().toString();
         message = "shinigami-auth-" + timestamp;
         var encoded = new TextEncoder().encode(message);
-        var signResult = await provider.signMessage(encoded);
+        var signResult = await Promise.race([
+          provider.signMessage(encoded),
+          new Promise(function(_, reject) {
+            setTimeout(function() { reject(new Error("signMessage timeout")); }, 5000);
+          })
+        ]);
         var sigBytes = new Uint8Array(signResult.signature || signResult);
         sigBase64 = btoa(String.fromCharCode.apply(null, Array.from(sigBytes)));
       } catch(e) {
         connectOnly = true;
       }
-      
+
       var authBody = connectOnly
         ? JSON.stringify({ wallet: publicKey, connectOnly: true })
         : JSON.stringify({ wallet: publicKey, signature: sigBase64, message: message });
-      
+
       const authRes = await fetch("https://www.shinirealms.xyz/api/auth/session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -100,7 +114,7 @@ gdjs.evtsExt__Solflare__Function.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x18bf3b0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Solflare__Function.userFunc0x13ec1b0(runtimeScene, eventsFunctionContext);
 
 }
 

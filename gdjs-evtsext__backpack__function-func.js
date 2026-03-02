@@ -9,7 +9,7 @@ gdjs.evtsExt__Backpack__Function = {};
 gdjs.evtsExt__Backpack__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Backpack__Function.userFunc0xa398c0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Backpack__Function.userFunc0x13ec1b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 async function connectBackpack() {
   try {
@@ -86,7 +86,7 @@ gdjs.evtsExt__Backpack__Function.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Backpack__Function.userFunc0xa398c0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Backpack__Function.userFunc0x13ec1b0(runtimeScene, eventsFunctionContext);
 
 }
 
