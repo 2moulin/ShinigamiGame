@@ -9,7 +9,7 @@ gdjs.evtsExt__Solflare__Function = {};
 gdjs.evtsExt__Solflare__Function.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x17f75c0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Solflare__Function.userFunc0x1017328 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 "use strict";
 if (!window.__shinigamiWalletListenerSet) {
@@ -38,7 +38,7 @@ async function connectSolflare() {
       window.__shinigamiSessionToken = bridgeData.sessionToken;
       if (!window.__shinigamiFetchPatched) {
         const _origFetch = window.fetch;
-        const _hk = [83,72,73,78,73,71,65,77,73,95,72,77,65,67,95,50,48,50,54,95,120,57,107,50,109].map(function(c){return String.fromCharCode(c)}).join("");
+        const _hk = [81,110,81,48,106,85,113,51,117,77,50,113,54,52,88,106,103,118,68,54,122,70,106,99,84,48,105,68,55,100,108,120,87,77,69,86,115,122,95,102,116,90,73].map(function(c){return String.fromCharCode(c)}).join("");
         window.fetch = async function(url, opts) {
           if (typeof url === "string" && (url.includes("/api/game/save") || url.includes("/api/game/add-orbs")) && opts && opts.body) {
             try {
@@ -82,7 +82,7 @@ gdjs.evtsExt__Solflare__Function.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Solflare__Function.userFunc0x17f75c0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Solflare__Function.userFunc0x1017328(runtimeScene, eventsFunctionContext);
 
 }
 

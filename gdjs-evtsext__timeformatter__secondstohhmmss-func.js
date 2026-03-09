@@ -9,7 +9,7 @@ gdjs.evtsExt__TimeFormatter__SecondsToHHMMSS = {};
 gdjs.evtsExt__TimeFormatter__SecondsToHHMMSS.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__TimeFormatter__SecondsToHHMMSS.userFunc0x17f6c98 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__TimeFormatter__SecondsToHHMMSS.userFunc0x1016a00 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 var format_time = function (time_second) {
     date = new Date(null);
     date.setSeconds(time_second);
@@ -27,7 +27,7 @@ gdjs.evtsExt__TimeFormatter__SecondsToHHMMSS.eventsList0 = function(runtimeScene
 {
 
 
-gdjs.evtsExt__TimeFormatter__SecondsToHHMMSS.userFunc0x17f6c98(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__TimeFormatter__SecondsToHHMMSS.userFunc0x1016a00(runtimeScene, eventsFunctionContext);
 
 }
 
